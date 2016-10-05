@@ -69,7 +69,7 @@ namespace TraktApiSharp.Requests.Base
             return Json.Deserialize<TResult>(responseContent);
         }
 
-        internal TraktClient Client { get; private set; }
+        internal TraktClient Client { get; }
 
         internal string Id { get; set; }
 
@@ -77,7 +77,7 @@ namespace TraktApiSharp.Requests.Base
 
         internal virtual int Episode { get; set; }
 
-        internal TraktExtendedOption ExtendedOption { get; set; }
+        internal TraktExtendedInfo ExtendedInfo { get; set; }
 
         internal TraktCommonFilter Filter { get; set; }
 
@@ -91,10 +91,7 @@ namespace TraktApiSharp.Requests.Base
 
         protected abstract string UriTemplate { get; }
 
-        protected virtual IDictionary<string, object> GetUriPathParameters()
-        {
-            return new Dictionary<string, object>();
-        }
+        protected virtual IDictionary<string, object> GetUriPathParameters() => new Dictionary<string, object>();
 
         private string BuildUrl()
         {
@@ -104,8 +101,8 @@ namespace TraktApiSharp.Requests.Base
             foreach (var param in pathParams)
                 uriPath.AddParameterFromKeyValuePair(param.Key, param.Value);
 
-            if (ExtendedOption != null && ExtendedOption.HasAnySet)
-                uriPath.AddParameters(new { extended = ExtendedOption.Resolve() });
+            if (ExtendedInfo != null && ExtendedInfo.HasAnySet)
+                uriPath.AddParameters(new { extended = ExtendedInfo.Resolve() });
 
             if (Filter != null && Filter.HasValues)
                 uriPath.AddParametersFromDictionary(Filter.GetParameters());

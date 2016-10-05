@@ -47,9 +47,7 @@
         /// <exception cref="Exceptions.TraktException">Thrown, if the request fails.</exception>
         [OAuthAuthorizationRequired]
         public async Task<TraktSyncLastActivities> GetLastActivitiesAsync()
-        {
-            return await QueryAsync(new TraktSyncLastActivitiesRequest(Client));
-        }
+            => await QueryAsync(new TraktSyncLastActivitiesRequest(Client));
 
         /// <summary>
         /// Gets the user's saved playback progress of scrobbles that are paused.
@@ -64,13 +62,11 @@
         /// <exception cref="Exceptions.TraktException">Thrown, if the request fails.</exception>
         [OAuthAuthorizationRequired]
         public async Task<IEnumerable<TraktSyncPlaybackProgressItem>> GetPlaybackProgressAsync(TraktSyncType objectType = null, int? limit = null)
-        {
-            return await QueryAsync(new TraktSyncPlaybackProgressRequest(Client)
+            => await QueryAsync(new TraktSyncPlaybackProgressRequest(Client)
             {
                 Type = objectType,
                 PaginationOptions = new TraktPaginationOptions(null, limit)
             });
-        }
 
         /// <summary>
         /// Removes a playback progress item from the user's playback progress list.
@@ -98,17 +94,15 @@
         /// See <a href="http://docs.trakt.apiary.io/#reference/sync/get-collection/get-collection">"Trakt API Doc - Sync: Get Collection"</a> for more information.
         /// </para>
         /// </summary>
-        /// <param name="extendedOption">
-        /// The extended option, which determines how much data about the collected movies should be queried.
-        /// See also <seealso cref="TraktExtendedOption" />.
+        /// <param name="extendedInfo">
+        /// The extended info, which determines how much data about the collected movies should be queried.
+        /// See also <seealso cref="TraktExtendedInfo" />.
         /// </param>
         /// <returns>A list of <see cref="TraktCollectionMovie" /> instances.</returns>
         /// <exception cref="Exceptions.TraktException">Thrown, if the request fails.</exception>
         [OAuthAuthorizationRequired]
-        public async Task<IEnumerable<TraktCollectionMovie>> GetCollectionMoviesAsync(TraktExtendedOption extendedOption = null)
-        {
-            return await QueryAsync(new TraktSyncCollectionMoviesRequest(Client) { ExtendedOption = extendedOption });
-        }
+        public async Task<IEnumerable<TraktCollectionMovie>> GetCollectionMoviesAsync(TraktExtendedInfo extendedInfo = null)
+            => await QueryAsync(new TraktSyncCollectionMoviesRequest(Client) { ExtendedInfo = extendedInfo });
 
         /// <summary>
         /// Gets all collected shows in the user's collection.
@@ -117,17 +111,15 @@
         /// See <a href="http://docs.trakt.apiary.io/#reference/sync/get-collection/get-collection">"Trakt API Doc - Sync: Get Collection"</a> for more information.
         /// </para>
         /// </summary>
-        /// <param name="extendedOption">
-        /// The extended option, which determines how much data about the collected shows should be queried.
-        /// See also <seealso cref="TraktExtendedOption" />.
+        /// <param name="extendedInfo">
+        /// The extended info, which determines how much data about the collected shows should be queried.
+        /// See also <seealso cref="TraktExtendedInfo" />.
         /// </param>
         /// <returns>A list of <see cref="TraktCollectionShow" /> instances.</returns>
         /// <exception cref="Exceptions.TraktException">Thrown, if the request fails.</exception>
         [OAuthAuthorizationRequired]
-        public async Task<IEnumerable<TraktCollectionShow>> GetCollectionShowsAsync(TraktExtendedOption extendedOption = null)
-        {
-            return await QueryAsync(new TraktSyncCollectionShowsRequest(Client) { ExtendedOption = extendedOption });
-        }
+        public async Task<IEnumerable<TraktCollectionShow>> GetCollectionShowsAsync(TraktExtendedInfo extendedInfo = null)
+            => await QueryAsync(new TraktSyncCollectionShowsRequest(Client) { ExtendedInfo = extendedInfo });
 
         /// <summary>
         /// Adds items to the user's collection. Accepts shows, seasons, episodes and movies.
@@ -186,17 +178,15 @@
         /// See <a href="http://docs.trakt.apiary.io/#reference/sync/get-watched/get-watched">"Trakt API Doc - Sync: Get Watched"</a> for more information.
         /// </para>
         /// </summary>
-        /// <param name="extendedOption">
-        /// The extended option, which determines how much data about the movies should be queried.
-        /// See also <seealso cref="TraktExtendedOption" />.
+        /// <param name="extendedInfo">
+        /// The extended info, which determines how much data about the movies should be queried.
+        /// See also <seealso cref="TraktExtendedInfo" />.
         /// </param>
         /// <returns>A list of <see cref="TraktWatchedMovie" /> instances.</returns>
         /// <exception cref="Exceptions.TraktException">Thrown, if the request fails.</exception>
         [OAuthAuthorizationRequired]
-        public async Task<IEnumerable<TraktWatchedMovie>> GetWatchedMoviesAsync(TraktExtendedOption extendedOption = null)
-        {
-            return await QueryAsync(new TraktSyncWatchedMoviesRequest(Client) { ExtendedOption = extendedOption });
-        }
+        public async Task<IEnumerable<TraktWatchedMovie>> GetWatchedMoviesAsync(TraktExtendedInfo extendedInfo = null)
+            => await QueryAsync(new TraktSyncWatchedMoviesRequest(Client) { ExtendedInfo = extendedInfo });
 
         /// <summary>
         /// Gets all shows the user has watched, sorted by most plays.
@@ -205,17 +195,15 @@
         /// See <a href="http://docs.trakt.apiary.io/#reference/sync/get-watched/get-watched">"Trakt API Doc - Sync: Get Watched"</a> for more information.
         /// </para>
         /// </summary>
-        /// <param name="extendedOption">
-        /// The extended option, which determines how much data about the shows should be queried.
-        /// See also <seealso cref="TraktExtendedOption" />.
+        /// <param name="extendedInfo">
+        /// The extended info, which determines how much data about the shows should be queried.
+        /// See also <seealso cref="TraktExtendedInfo" />.
         /// </param>
         /// <returns>A list of <see cref="TraktWatchedShow" /> instances.</returns>
         /// <exception cref="Exceptions.TraktException">Thrown, if the request fails.</exception>
         [OAuthAuthorizationRequired]
-        public async Task<IEnumerable<TraktWatchedShow>> GetWatchedShowsAsync(TraktExtendedOption extendedOption = null)
-        {
-            return await QueryAsync(new TraktSyncWatchedShowsRequest(Client) { ExtendedOption = extendedOption });
-        }
+        public async Task<IEnumerable<TraktWatchedShow>> GetWatchedShowsAsync(TraktExtendedInfo extendedInfo = null)
+            => await QueryAsync(new TraktSyncWatchedShowsRequest(Client) { ExtendedInfo = extendedInfo });
 
         /// <summary>
         /// Gets all movies, shows, seasons and / or episodes the user has watched, sorted by most recent.
@@ -225,12 +213,12 @@
         /// </para>
         /// </summary>
         /// <param name="historyItemType">Determines, which type of history items should be queried. See also <seealso cref="TraktSyncItemType" />.</param>
-        /// <param name="historyItemId">An unique history item id to determine, which item should be specifically queried. Will be ignored, if <paramref name="historyItemType" /> is not set or unspecified.</param>
+        /// <param name="itemId">The Trakt Id for the item, which should be specifically queried. Will be ignored, if <paramref name="historyItemType" /> is not set or unspecified.</param>
         /// <param name="startAt">The datetime, after which history items should be queried. Will be converted to the Trakt UTC-datetime and -format.</param>
         /// <param name="endAt">The datetime, until which history items should be queried. Will be converted to the Trakt UTC-datetime and -format.</param>
-        /// <param name="extendedOption">
-        /// The extended option, which determines how much data about the history items should be queried.
-        /// See also <seealso cref="TraktExtendedOption" />.
+        /// <param name="extendedInfo">
+        /// The extended info, which determines how much data about the history items should be queried.
+        /// See also <seealso cref="TraktExtendedInfo" />.
         /// </param>
         /// <param name="page">The page of the history items list, that should be queried. Defaults to the first page.</param>
         /// <param name="limitPerPage">The maximum count of history items for each page, that should be queried.</param>
@@ -243,21 +231,19 @@
         /// </returns>
         /// <exception cref="Exceptions.TraktException">Thrown, if the request fails.</exception>
         [OAuthAuthorizationRequired]
-        public async Task<TraktPaginationListResult<TraktHistoryItem>> GetWatchedHistoryAsync(TraktSyncItemType historyItemType = null, ulong? historyItemId = null,
-                                                                                              DateTime? startAt = null, DateTime? endAt = null,
-                                                                                              TraktExtendedOption extendedOption = null,
-                                                                                              int? page = null, int? limitPerPage = null)
-        {
-            return await QueryAsync(new TraktSyncWatchedHistoryRequest(Client)
+        public async Task<TraktPaginationListResult<TraktHistoryItem>> GetWatchedHistoryAsync(TraktSyncItemType historyItemType = null, uint? itemId = null,
+                                                                                  DateTime? startAt = null, DateTime? endAt = null,
+                                                                                  TraktExtendedInfo extendedInfo = null,
+                                                                                  int? page = null, int? limitPerPage = null)
+            => await QueryAsync(new TraktSyncWatchedHistoryRequest(Client)
             {
                 Type = historyItemType,
-                ItemId = historyItemId,
+                ItemId = itemId,
                 StartAt = startAt,
                 EndAt = endAt,
-                ExtendedOption = extendedOption,
+                ExtendedInfo = extendedInfo,
                 PaginationOptions = new TraktPaginationOptions(page, limitPerPage)
             });
-        }
 
         /// <summary>
         /// Adds items to the user's watch history. Accepts shows, seasons, episodes and movies.
@@ -322,24 +308,22 @@
         /// Will be ignored, if the given array contains a number higher than 10 or below 1 or if it contains more than ten numbers.
         /// Will be ignored, if the given <paramref name="ratingsItemType" /> is null or unspecified.
         /// </param>
-        /// <param name="extendedOption">
-        /// The extended option, which determines how much data about the rating items should be queried.
-        /// See also <seealso cref="TraktExtendedOption" />.
+        /// <param name="extendedInfo">
+        /// The extended info, which determines how much data about the rating items should be queried.
+        /// See also <seealso cref="TraktExtendedInfo" />.
         /// </param>
         /// <returns>A list of <see cref="TraktRatingsItem" /> instances.</returns>
         /// <exception cref="Exceptions.TraktException">Thrown, if the request fails.</exception>
         [OAuthAuthorizationRequired]
         public async Task<IEnumerable<TraktRatingsItem>> GetRatingsAsync(TraktRatingsItemType ratingsItemType = null,
-                                                                         int[] ratingsFilter = null,
-                                                                         TraktExtendedOption extendedOption = null)
-        {
-            return await QueryAsync(new TraktSyncRatingsRequest(Client)
+                                                             int[] ratingsFilter = null,
+                                                             TraktExtendedInfo extendedInfo = null)
+            => await QueryAsync(new TraktSyncRatingsRequest(Client)
             {
                 Type = ratingsItemType,
                 Rating = ratingsFilter,
-                ExtendedOption = extendedOption
+                ExtendedInfo = extendedInfo
             });
-        }
 
         /// <summary>
         /// Adds items to the user's ratings. Accepts shows, seasons, episodes and movies.
@@ -399,9 +383,9 @@
         /// </para>
         /// </summary>
         /// <param name="watchlistItemType">Determines, which type of watchlist items should be queried. See also <seealso cref="TraktSyncItemType" />.</param>
-        /// <param name="extendedOption">
-        /// The extended option, which determines how much data about the watchlist items should be queried.
-        /// See also <seealso cref="TraktExtendedOption" />.
+        /// <param name="extendedInfo">
+        /// The extended info, which determines how much data about the watchlist items should be queried.
+        /// See also <seealso cref="TraktExtendedInfo" />.
         /// </param>
         /// <param name="page">The page of the watchlist items list, that should be queried. Defaults to the first page.</param>
         /// <param name="limitPerPage">The maximum count of watchlist items for each page, that should be queried.</param>
@@ -415,16 +399,14 @@
         /// <exception cref="Exceptions.TraktException">Thrown, if the request fails.</exception>
         [OAuthAuthorizationRequired]
         public async Task<TraktPaginationListResult<TraktWatchlistItem>> GetWatchlistAsync(TraktSyncItemType watchlistItemType = null,
-                                                                                           TraktExtendedOption extendedOption = null,
-                                                                                           int? page = null, int? limitPerPage = null)
-        {
-            return await QueryAsync(new TraktSyncWatchlistRequest(Client)
+                                                                               TraktExtendedInfo extendedInfo = null,
+                                                                               int? page = null, int? limitPerPage = null)
+            => await QueryAsync(new TraktSyncWatchlistRequest(Client)
             {
                 Type = watchlistItemType,
-                ExtendedOption = extendedOption,
+                ExtendedInfo = extendedInfo,
                 PaginationOptions = new TraktPaginationOptions(page, limitPerPage)
             });
-        }
 
         /// <summary>
         /// Adds items to the user's watchlist. Accepts shows, seasons, episodes and movies.
