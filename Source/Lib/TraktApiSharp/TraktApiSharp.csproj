@@ -24,7 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\..\..\Build\Lib\Debug\TraktApiSharp.XML</DocumentationFile>
+    <DocumentationFile>..\..\..\Build\Lib\Debug\TraktApiSharp.xml</DocumentationFile>
     <NoWarn>1591</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -68,6 +68,8 @@
     <Compile Include="Enums\TraktEnumeration.cs" />
     <Compile Include="Enums\TraktHiddenItemsSection.cs" />
     <Compile Include="Enums\TraktListItemType.cs" />
+    <Compile Include="Enums\TraktListSortOrder.cs" />
+    <Compile Include="Enums\TraktListType.cs" />
     <Compile Include="Enums\TraktMediaAudio.cs" />
     <Compile Include="Enums\TraktMediaAudioChannel.cs" />
     <Compile Include="Enums\TraktMediaResolution.cs" />
@@ -75,7 +77,6 @@
     <Compile Include="Enums\TraktObjectType.cs" />
     <Compile Include="Enums\TraktScrobbleActionType.cs" />
     <Compile Include="Enums\TraktSearchField.cs" />
-    <Compile Include="Enums\TraktSearchIdLookupType.cs" />
     <Compile Include="Enums\TraktAccessScope.cs" />
     <Compile Include="Enums\TraktAccessTokenGrantType.cs" />
     <Compile Include="Enums\TraktAccessTokenType.cs" />
@@ -142,6 +143,7 @@
     <Compile Include="Objects\Basic\ITraktPaginationResultHeaders.cs" />
     <Compile Include="Objects\Basic\ITraktResultHeaders.cs" />
     <Compile Include="Objects\Basic\TraktMetadata.cs" />
+    <Compile Include="Objects\Basic\TraktTranslation.cs" />
     <Compile Include="Objects\Get\Calendars\TraktCalendarMovie.cs" />
     <Compile Include="Objects\Get\Calendars\TraktCalendarShow.cs" />
     <Compile Include="Objects\Get\People\Credits\TraktPersonMovieCreditsCastItem.cs" />
@@ -154,6 +156,7 @@
     <Compile Include="Objects\Get\People\Credits\TraktPersonShowCredits.cs" />
     <Compile Include="Objects\Get\Shows\Episodes\TraktEpisodeCollectionProgress.cs" />
     <Compile Include="Objects\Get\Shows\Episodes\TraktEpisodeProgress.cs" />
+    <Compile Include="Objects\Get\Shows\Episodes\TraktEpisodeTranslation.cs" />
     <Compile Include="Objects\Get\Shows\Episodes\TraktEpisodeWatchedProgress.cs" />
     <Compile Include="Objects\Get\Shows\Seasons\TraktSeasonCollectionProgress.cs" />
     <Compile Include="Objects\Get\Shows\Seasons\TraktSeasonProgress.cs" />
@@ -334,7 +337,12 @@
     <Compile Include="Modules\TraktMultipleQueryParams.cs" />
     <Compile Include="Requests\WithOAuth\Calendars\TraktCalendarUserDVDMoviesRequest.cs" />
     <Compile Include="Requests\WithoutOAuth\Calendars\TraktCalendarAllDVDMoviesRequest.cs" />
+    <Compile Include="Requests\WithoutOAuth\Movies\TraktMovieListsRequest.cs" />
+    <Compile Include="Requests\WithoutOAuth\Shows\Episodes\TraktEpisodeListsRequest.cs" />
+    <Compile Include="Requests\WithoutOAuth\Shows\Episodes\TraktEpisodeTranslationsRequest.cs" />
+    <Compile Include="Requests\WithoutOAuth\Shows\Seasons\TraktSeasonListsRequest.cs" />
     <Compile Include="Requests\WithoutOAuth\Shows\TraktShowLastEpisodeRequest.cs" />
+    <Compile Include="Requests\WithoutOAuth\Shows\TraktShowListsRequest.cs" />
     <Compile Include="Requests\WithoutOAuth\Shows\TraktShowNextEpisodeRequest.cs" />
     <Compile Include="Services\TraktSerializationService.cs" />
     <Compile Include="Utils\Json.cs" />
@@ -449,8 +457,6 @@
     <Compile Include="Requests\WithoutOAuth\Movies\TraktMovieRatingsRequest.cs" />
     <Compile Include="Requests\WithoutOAuth\Movies\TraktMovieRelatedMoviesRequest.cs" />
     <Compile Include="Requests\WithoutOAuth\Movies\TraktMovieReleasesRequest.cs" />
-    <Compile Include="Requests\WithoutOAuth\Movies\TraktMovieSingleReleaseRequest.cs" />
-    <Compile Include="Requests\WithoutOAuth\Movies\TraktMovieSingleTranslationRequest.cs" />
     <Compile Include="Requests\WithoutOAuth\Movies\TraktMovieStatisticsRequest.cs" />
     <Compile Include="Requests\WithoutOAuth\Movies\TraktMovieSummaryRequest.cs" />
     <Compile Include="Requests\WithoutOAuth\Movies\TraktMovieTranslationsRequest.cs" />
@@ -458,9 +464,7 @@
     <Compile Include="Requests\WithoutOAuth\People\TraktPersonMovieCreditsRequest.cs" />
     <Compile Include="Requests\WithoutOAuth\People\TraktPersonShowCreditsRequest.cs" />
     <Compile Include="Requests\WithoutOAuth\People\TraktPersonSummaryRequest.cs" />
-    <Compile Include="Requests\WithoutOAuth\Search\TraktSearchOldIdLookupRequest.cs" />
     <Compile Include="Requests\WithoutOAuth\Search\TraktSearchRequest.cs" />
-    <Compile Include="Requests\WithoutOAuth\Search\TraktSearchOldTextQueryRequest.cs" />
     <Compile Include="Requests\WithoutOAuth\Shows\Common\TraktShowsMostAnticipatedRequest.cs" />
     <Compile Include="Requests\WithoutOAuth\Shows\Common\TraktShowsMostCollectedRequest.cs" />
     <Compile Include="Requests\WithoutOAuth\Shows\Common\TraktShowsMostPlayedRequest.cs" />
@@ -486,7 +490,6 @@
     <Compile Include="Requests\WithoutOAuth\Shows\TraktShowPeopleRequest.cs" />
     <Compile Include="Requests\WithoutOAuth\Shows\TraktShowRatingsRequest.cs" />
     <Compile Include="Requests\WithoutOAuth\Shows\TraktShowRelatedShowsRequest.cs" />
-    <Compile Include="Requests\WithoutOAuth\Shows\TraktShowSingleTranslationRequest.cs" />
     <Compile Include="Requests\WithoutOAuth\Shows\TraktShowStatisticsRequest.cs" />
     <Compile Include="Requests\WithoutOAuth\Shows\TraktShowSummaryRequest.cs" />
     <Compile Include="Requests\WithoutOAuth\Shows\TraktShowTranslationsRequest.cs" />

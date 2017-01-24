@@ -107,6 +107,8 @@
     <Compile Include="Enums\TraktAccessScopeTests.cs" />
     <Compile Include="Enums\TraktAccessTokenTypeTests.cs" />
     <Compile Include="Enums\TraktAccessTokenGrantTypeTests.cs" />
+    <Compile Include="Enums\TraktListSortOrderTests.cs" />
+    <Compile Include="Enums\TraktListTypeTests.cs" />
     <Compile Include="Enums\TraktSearchFieldTests.cs" />
     <Compile Include="Enums\TraktSearchIdTypeTests.cs" />
     <Compile Include="Exceptions\TraktCheckinExceptionTests.cs" />
@@ -125,6 +127,8 @@
     <Compile Include="Modules\TraktShowsModuleTests.cs" />
     <Compile Include="Modules\TraktSyncModuleTests.cs" />
     <Compile Include="Modules\TraktUsersModuleTests.cs" />
+    <Compile Include="Objects\Get\Shows\Episodes\TraktEpisodeSingleTranslationTests.cs" />
+    <Compile Include="Objects\Get\Shows\Episodes\TraktEpisodeTranslationsTests.cs" />
     <Compile Include="Objects\Post\Syncs\Collection\TraktSyncCollectionPostBuilderTests.cs" />
     <Compile Include="Objects\Post\Syncs\History\TraktSyncHistoryPostBuilderTests.cs" />
     <Compile Include="Objects\Post\Syncs\History\TraktSyncHistoryRemovePostBuilderTests.cs" />
@@ -160,7 +164,6 @@
     <Compile Include="Enums\TraktReleaseTypeTests.cs" />
     <Compile Include="Requests\Base\TraktRequestObjectTypeTests.cs" />
     <Compile Include="Enums\TraktScrobbleActionTypeTests.cs" />
-    <Compile Include="Enums\TraktSearchIdLookupTypeTests.cs" />
     <Compile Include="Enums\TraktSearchResultTypeTests.cs" />
     <Compile Include="Enums\TraktShowStatusTests.cs" />
     <Compile Include="Enums\TraktHistoryActionTypeTests.cs" />
@@ -308,11 +311,6 @@
     <Compile Include="Objects\Post\Users\CustomListItems\TraktUserCustomListItemsPostTests.cs" />
     <Compile Include="Objects\Post\Users\Responses\TraktUserFollowUserPostResponseTests.cs" />
     <Compile Include="Objects\Post\Users\TraktUserCustomListPostTests.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Requests\Base\ITraktRequestTests.cs" />
     <Compile Include="Requests\Base\TraktPaginationOptionsTests.cs" />
     <Compile Include="Requests\Base\TraktRequestTests.cs" />
@@ -340,12 +338,6 @@
       <Project>{85190989-7d73-4b21-9225-ad02fe14d9c2}</Project>
       <Name>TraktApiSharp</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -393,6 +385,7 @@
     <None Include="TestData\Objects\Get\Movies\Common\MoviesRecentlyUpdated.json" />
     <None Include="TestData\Objects\Get\Movies\Common\MoviesTrending.json" />
     <None Include="TestData\Objects\Get\Movies\MovieAliases.json" />
+    <None Include="TestData\Objects\Get\Movies\MovieLists.json" />
     <None Include="TestData\Objects\Get\Movies\MoviePeople.json" />
     <None Include="TestData\Objects\Get\Movies\MovieRatings.json" />
     <None Include="TestData\Objects\Get\Movies\MovieRelatedMoviesFull.json" />
@@ -428,13 +421,17 @@
     <None Include="TestData\Objects\Get\Shows\Common\ShowsRecentlyUpdated.json" />
     <None Include="TestData\Objects\Get\Shows\Common\ShowsTrending.json" />
     <None Include="TestData\Objects\Get\Shows\Episodes\EpisodeComments.json" />
+    <None Include="TestData\Objects\Get\Shows\Episodes\EpisodeLists.json" />
     <None Include="TestData\Objects\Get\Shows\Episodes\EpisodeRatings.json" />
+    <None Include="TestData\Objects\Get\Shows\Episodes\EpisodeSingleTranslation.json" />
     <None Include="TestData\Objects\Get\Shows\Episodes\EpisodeStatistics.json" />
     <None Include="TestData\Objects\Get\Shows\Episodes\EpisodeSummaryFull.json" />
     <None Include="TestData\Objects\Get\Shows\Episodes\EpisodeSummaryFullAndImages.json" />
     <None Include="TestData\Objects\Get\Shows\Episodes\EpisodeSummaryImages.json" />
     <None Include="TestData\Objects\Get\Shows\Episodes\EpisodeSummaryMinimal.json" />
+    <None Include="TestData\Objects\Get\Shows\Episodes\EpisodeSummaryMinimalWithTranslations.json" />
     <None Include="TestData\Objects\Get\Shows\Episodes\EpisodeWatchingUsers.json" />
+    <None Include="TestData\Objects\Get\Shows\Episodes\EpisodeTranslations.json" />
     <None Include="TestData\Objects\Get\Shows\Seasons\All\FullAndImages\SeasonsAllFullAndImages.json" />
     <None Include="TestData\Objects\Get\Shows\Seasons\All\FullAndImages\SeasonsAllFullAndImagesWithEpisodes.json" />
     <None Include="TestData\Objects\Get\Shows\Seasons\All\Full\SeasonsAllFull.json" />
@@ -443,8 +440,10 @@
     <None Include="TestData\Objects\Get\Shows\Seasons\All\Images\SeasonsAllImagesWithEpisodes.json" />
     <None Include="TestData\Objects\Get\Shows\Seasons\All\Minimal\SeasonsAllMinimal.json" />
     <None Include="TestData\Objects\Get\Shows\Seasons\All\Minimal\SeasonsAllMinimalWithEpisodes.json" />
+    <None Include="TestData\Objects\Get\Shows\Seasons\All\Minimal\SeasonsAllMinimalWithEpisodesTranslations.json" />
     <None Include="TestData\Objects\Get\Shows\Seasons\Single\SeasonComments.json" />
     <None Include="TestData\Objects\Get\Shows\Seasons\Single\SeasonEpisodes.json" />
+    <None Include="TestData\Objects\Get\Shows\Seasons\Single\SeasonLists.json" />
     <None Include="TestData\Objects\Get\Shows\Seasons\Single\SeasonRatings.json" />
     <None Include="TestData\Objects\Get\Shows\Seasons\Single\SeasonStatistics.json" />
     <None Include="TestData\Objects\Get\Shows\Seasons\Single\SeasonSummaryFull.json" />
@@ -455,11 +454,13 @@
     <None Include="TestData\Objects\Get\Shows\Seasons\Single\SeasonSummaryWithEpisodesFullAndImages.json" />
     <None Include="TestData\Objects\Get\Shows\Seasons\Single\SeasonSummaryWithEpisodesImages.json" />
     <None Include="TestData\Objects\Get\Shows\Seasons\Single\SeasonSummaryWithEpisodesMinimal.json" />
+    <None Include="TestData\Objects\Get\Shows\Seasons\Single\SeasonSummaryWithEpisodesMinimalTranslations.json" />
     <None Include="TestData\Objects\Get\Shows\Seasons\Single\SeasonWatchingUsers.json" />
     <None Include="TestData\Objects\Get\Shows\ShowAliases.json" />
     <None Include="TestData\Objects\Get\Shows\ShowCollectionProgress.json" />
     <None Include="TestData\Objects\Get\Shows\ShowCollectionProgressComplete.json" />
     <None Include="TestData\Objects\Get\Shows\ShowComments.json" />
+    <None Include="TestData\Objects\Get\Shows\ShowLists.json" />
     <None Include="TestData\Objects\Get\Shows\ShowPeople.json" />
     <None Include="TestData\Objects\Get\Shows\ShowRatings.json" />
     <None Include="TestData\Objects\Get\Shows\ShowRelatedShowsFull.json" />

@@ -2,10 +2,11 @@ TraktApiSharp
 ===
 ##### This is a C# wrapper library for the [Trakt.tv](https://trakt.tv/) [API](http://docs.trakt.apiary.io/#).
 
-[![NuGet Package](https://img.shields.io/badge/NuGet-v0.8.0-brightgreen.svg?style=flat)](https://www.nuget.org/packages/TraktApiSharp)
+[![NuGet Package](https://img.shields.io/badge/NuGet-v0.9.0-brightgreen.svg?style=flat)](https://www.nuget.org/packages/TraktApiSharp)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](https://opensource.org/licenses/MIT)
 [![Build status branch master](https://ci.appveyor.com/api/projects/status/03n3og01n67yef7n/branch/master?svg=true&passingText=master%20-%20passing&pendingText=master%20-%20pending&failingText=master%20-%20failing)](https://ci.appveyor.com/project/henrikfroehling/traktapisharp/branch/master)
 [![Build status branch dev](https://ci.appveyor.com/api/projects/status/03n3og01n67yef7n/branch/dev?svg=true&passingText=dev%20-%20passing&pendingText=dev%20-%20pending&failingText=dev%20-%20failing)](https://ci.appveyor.com/project/henrikfroehling/traktapisharp/branch/dev)
+[![Build status branch next-version](https://ci.appveyor.com/api/projects/status/03n3og01n67yef7n/branch/next-version?svg=true&passingText=next-version%20-%20passing&pendingText=next-version%20-%20pending&failingText=next-version%20-%20failing)](https://ci.appveyor.com/project/henrikfroehling/traktapisharp/branch/next-version)
 [![Zenhub Support](https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png)](https://www.zenhub.com/)
 
 [![Gitter](https://badges.gitter.im/traktapisharp/Lobby.svg)](https://gitter.im/traktapisharp/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
@@ -32,7 +33,7 @@ TraktApiSharp
 PM> Install-Package TraktApiSharp
 ```
 ### Library API Documentation
-- [Latest Version](https://henrikfroehling.github.io/TraktApiSharp/apidoc/v0.8.0/)
+- [Latest Version](https://henrikfroehling.github.io/TraktApiSharp/apidoc/v0.9.0/)
 - [All Versions](https://henrikfroehling.github.io/TraktApiSharp/apidoc/)
 
 #### [Report a bug](https://github.com/henrikfroehling/TraktApiSharp/issues) or [Ask a question](https://gitter.im/traktapisharp/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
@@ -152,7 +153,7 @@ Console.WriteLine(theMartian.Overview);
 ```
 The MIT License (MIT)
 
-Copyright (c) 2016 Henrik Fröhling
+Copyright (c) 2016 - 2017 Henrik Fröhling
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
