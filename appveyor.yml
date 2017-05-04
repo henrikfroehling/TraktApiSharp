@@ -5,7 +5,7 @@
     packageVersion: 0.9.0
 
   version: '{branch}-v0.9.0-{build}'
-  image: Visual Studio 2015
+  image: Visual Studio 2017
 
   install:
     - cmd: appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
@@ -56,7 +56,7 @@
 # build in Debug mode
 -
   version: '{branch}-{build}'
-  image: Visual Studio 2015
+  image: Visual Studio 2017
 
   install:
     - cmd: appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
@@ -99,7 +99,7 @@
 # do not deploy at all
 -
   version: '{branch}-{build}'
-  image: Visual Studio 2015
+  image: Visual Studio 2017
 
   install:
     - cmd: appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
