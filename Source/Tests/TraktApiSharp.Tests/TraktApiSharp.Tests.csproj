@@ -135,6 +135,7 @@
     <Compile Include="Objects\Post\Syncs\Ratings\TraktSyncRatingsPostBuilderTests.cs" />
     <Compile Include="Objects\Post\Syncs\Watchlist\TraktSyncWatchlistPostBuilderTests.cs" />
     <Compile Include="Objects\Post\Users\CustomListItems\TraktUserCustomListItemsPostBuilderTests.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\TraktUserHiddenItemsPostTests.cs" />
     <Compile Include="Requests\Base\Delete\TraktDeleteByIdRequestTests.cs" />
     <Compile Include="Requests\Base\Delete\TraktDeleteRequestTests.cs" />
     <Compile Include="Requests\Base\Get\TraktGetByIdRequestTests.cs" />

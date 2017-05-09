@@ -328,6 +328,15 @@
     <Compile Include="Objects\Post\Users\CustomListItems\TraktUserCustomListItemsPostShowEpisode.cs" />
     <Compile Include="Objects\Post\Users\CustomListItems\TraktUserCustomListItemsPostShow.cs" />
     <Compile Include="Objects\Post\Users\CustomListItems\TraktUserCustomListItemsPostShowSeason.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\Responses\TraktUsersHiddenItemsPostResponse.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\Responses\TraktUsersHiddenItemsPostResponseGroup.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\Responses\TraktUsersHiddenItemsPostResponseNotFound.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\Responses\TraktUsersHiddenItemsPostResponseNotFoundItem.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\TraktUsersHiddenItemsPost.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\TraktUsersHiddenItemsPostMovie.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\TraktUsersHiddenItemsPostSeason.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\TraktUsersHiddenItemsPostShow.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\TraktUsersHiddenItemsPostShowSeason.cs" />
     <Compile Include="Objects\Post\Users\Responses\TraktUserFollowUserPostResponse.cs" />
     <Compile Include="Objects\Post\Users\CustomListItems\TraktUserCustomListItemsPost.cs" />
     <Compile Include="Objects\Post\Users\TraktUserCustomListPost.cs" />
