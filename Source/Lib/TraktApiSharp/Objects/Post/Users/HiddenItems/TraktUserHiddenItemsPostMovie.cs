@@ -6,7 +6,7 @@
     using System;
 
     /// <summary>A Trakt hidden items post movie, containing the required movie ids.</summary>
-    public class TraktUsersHiddenItemsPostMovie
+    public class TraktUserHiddenItemsPostMovie
     {
         /// <summary>Gets or sets the optional title of the Trakt movie.<para>Nullable</para></summary>
         [JsonProperty(PropertyName = "title")]

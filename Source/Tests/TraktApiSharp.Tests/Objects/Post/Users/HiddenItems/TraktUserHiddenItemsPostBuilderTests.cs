@@ -12,10 +12,10 @@
     using TraktApiSharp.Objects.Post.Users.HiddenItems;
 
     [TestClass]
-    public class TraktUsersHiddenItemsPostBuilderTests
+    public class TraktUserHiddenItemsPostBuilderTests
     {
         [TestMethod]
-        public void TestTraktUsersHiddenItemsPostBuilderAddMovie()
+        public void TestTraktUserHiddenItemsPostBuilderAddMovie()
         {
             var movie1 = new TraktMovie
             {
@@ -30,7 +30,7 @@
                 }
             };
 
-            var builder = TraktUsersHiddenItemsPost.Builder(TraktHiddenItemsSection.Calendar);
+            var builder = TraktUserHiddenItemsPost.Builder(TraktHiddenItemsSection.Calendar);
 
             builder.AddMovie(movie1);
 
@@ -116,9 +116,9 @@
         }
 
         [TestMethod]
-        public void TestTraktUsersHiddenItemsPostBuilderAddMovieArgumentExceptions()
+        public void TestTraktUserHiddenItemsPostBuilderAddMovieArgumentExceptions()
         {
-            var builder = TraktUsersHiddenItemsPost.Builder(TraktHiddenItemsSection.Calendar);
+            var builder = TraktUserHiddenItemsPost.Builder(TraktHiddenItemsSection.Calendar);
 
             Action act = () => builder.AddMovie(null);
             act.ShouldThrow<ArgumentNullException>();
@@ -140,7 +140,7 @@
         // ----------------------------------------------------------------------------------------
 
         [TestMethod]
-        public void TestTraktUsersHiddenItemsPostBuilderAddMoviesCollection()
+        public void TestTraktUserHiddenItemsPostBuilderAddMoviesCollection()
         {
             var movie1 = new TraktMovie
             {
@@ -174,7 +174,7 @@
                 movie2
             };
 
-            var builder = TraktUsersHiddenItemsPost.Builder(TraktHiddenItemsSection.Calendar);
+            var builder = TraktUserHiddenItemsPost.Builder(TraktHiddenItemsSection.Calendar);
 
             builder.AddMovies(movies);
 
@@ -233,9 +233,9 @@
         }
 
         [TestMethod]
-        public void TestTraktUsersHiddenItemsPostBuilderAddMoviesCollectionArgumentExceptions()
+        public void TestTraktUserHiddenItemsPostBuilderAddMoviesCollectionArgumentExceptions()
         {
-            var builder = TraktUsersHiddenItemsPost.Builder(TraktHiddenItemsSection.Calendar);
+            var builder = TraktUserHiddenItemsPost.Builder(TraktHiddenItemsSection.Calendar);
 
             Action act = () => builder.AddMovies(null);
             act.ShouldThrow<ArgumentNullException>();
@@ -277,7 +277,7 @@
         // ----------------------------------------------------------------------------------------
 
         [TestMethod]
-        public void TestTraktUsersHiddenItemsPostBuilderAddSeason()
+        public void TestTraktUserHiddenItemsPostBuilderAddSeason()
         {
             var season1 = new TraktSeason
             {
@@ -290,7 +290,7 @@
                 }
             };
 
-            var builder = TraktUsersHiddenItemsPost.Builder(TraktHiddenItemsSection.ProgressWatched);
+            var builder = TraktUserHiddenItemsPost.Builder(TraktHiddenItemsSection.ProgressWatched);
 
             builder.AddSeason(season1);
 
@@ -368,9 +368,9 @@
         }
 
         [TestMethod]
-        public void TestTraktUsersHiddenItemsPostBuilderAddSeasonArgumentExceptions()
+        public void TestTraktUserHiddenItemsPostBuilderAddSeasonArgumentExceptions()
         {
-            var builder = TraktUsersHiddenItemsPost.Builder(TraktHiddenItemsSection.ProgressWatched);
+            var builder = TraktUserHiddenItemsPost.Builder(TraktHiddenItemsSection.ProgressWatched);
 
             Action act = () => builder.AddSeason(null);
             act.ShouldThrow<ArgumentNullException>();
@@ -386,7 +386,7 @@
         // ----------------------------------------------------------------------------------------
 
         [TestMethod]
-        public void TestTraktUsersHiddenItemsPostBuilderAddSeasonsCollection()
+        public void TestTraktUserHiddenItemsPostBuilderAddSeasonsCollection()
         {
             var season1 = new TraktSeason
             {
@@ -416,7 +416,7 @@
                 season2
             };
 
-            var builder = TraktUsersHiddenItemsPost.Builder(TraktHiddenItemsSection.ProgressWatched);
+            var builder = TraktUserHiddenItemsPost.Builder(TraktHiddenItemsSection.ProgressWatched);
 
             builder.AddSeasons(seasons);
 
@@ -471,9 +471,9 @@
         }
 
         [TestMethod]
-        public void TestTraktUsersHiddenItemsPostBuilderAddSeasonsCollectionArgumentExceptions()
+        public void TestTraktUserHiddenItemsPostBuilderAddSeasonsCollectionArgumentExceptions()
         {
-            var builder = TraktUsersHiddenItemsPost.Builder(TraktHiddenItemsSection.ProgressWatched);
+            var builder = TraktUserHiddenItemsPost.Builder(TraktHiddenItemsSection.ProgressWatched);
 
             Action act = () => builder.AddSeasons(null);
             act.ShouldThrow<ArgumentNullException>();
@@ -499,7 +499,7 @@
         // ----------------------------------------------------------------------------------------
 
         [TestMethod]
-        public void TestTraktUsersHiddenItemsPostBuilderAddShow()
+        public void TestTraktUserHiddenItemsPostBuilderAddShow()
         {
             var show1 = new TraktShow
             {
@@ -516,7 +516,7 @@
                 }
             };
 
-            var builder = TraktUsersHiddenItemsPost.Builder(TraktHiddenItemsSection.Recommendations);
+            var builder = TraktUserHiddenItemsPost.Builder(TraktHiddenItemsSection.Recommendations);
 
             builder.AddShow(show1);
 
@@ -613,9 +613,9 @@
         }
 
         [TestMethod]
-        public void TestTraktUsersHiddenItemsPostBuilderAddShowArgumentExceptions()
+        public void TestTraktUserHiddenItemsPostBuilderAddShowArgumentExceptions()
         {
-            var builder = TraktUsersHiddenItemsPost.Builder(TraktHiddenItemsSection.Recommendations);
+            var builder = TraktUserHiddenItemsPost.Builder(TraktHiddenItemsSection.Recommendations);
 
             Action act = () => builder.AddShow(null);
             act.ShouldThrow<ArgumentNullException>();
@@ -637,7 +637,7 @@
         // ----------------------------------------------------------------------------------------
 
         [TestMethod]
-        public void TestTraktUsersHiddenItemsPostBuilderAddShowsCollection()
+        public void TestTraktUserHiddenItemsPostBuilderAddShowsCollection()
         {
             var show1 = new TraktShow
             {
@@ -675,7 +675,7 @@
                 show2
             };
 
-            var builder = TraktUsersHiddenItemsPost.Builder(TraktHiddenItemsSection.Recommendations);
+            var builder = TraktUserHiddenItemsPost.Builder(TraktHiddenItemsSection.Recommendations);
 
             builder.AddShows(shows);
 
@@ -740,9 +740,9 @@
         }
 
         [TestMethod]
-        public void TestTraktUsersHiddenItemsPostBuilderAddShowsCollectionArgumentExceptions()
+        public void TestTraktUserHiddenItemsPostBuilderAddShowsCollectionArgumentExceptions()
         {
-            var builder = TraktUsersHiddenItemsPost.Builder(TraktHiddenItemsSection.Recommendations);
+            var builder = TraktUserHiddenItemsPost.Builder(TraktHiddenItemsSection.Recommendations);
 
             Action act = () => builder.AddShows(null);
             act.ShouldThrow<ArgumentNullException>();
@@ -784,7 +784,7 @@
         // ----------------------------------------------------------------------------------------
 
         [TestMethod]
-        public void TestTraktUsersHiddenItemsPostBuilderAddShowWithSeasons()
+        public void TestTraktUserHiddenItemsPostBuilderAddShowWithSeasons()
         {
             var show1 = new TraktShow
             {
@@ -801,7 +801,7 @@
                 }
             };
 
-            var builder = TraktUsersHiddenItemsPost.Builder(TraktHiddenItemsSection.Recommendations);
+            var builder = TraktUserHiddenItemsPost.Builder(TraktHiddenItemsSection.Recommendations);
 
             builder.AddShow(show1, 1);
 
@@ -989,9 +989,9 @@
         }
 
         [TestMethod]
-        public void TestTraktUsersHiddenItemsPostBuilderAddShowWithSeasonsArgumentExceptions()
+        public void TestTraktUserHiddenItemsPostBuilderAddShowWithSeasonsArgumentExceptions()
         {
-            var builder = TraktUsersHiddenItemsPost.Builder(TraktHiddenItemsSection.Recommendations);
+            var builder = TraktUserHiddenItemsPost.Builder(TraktHiddenItemsSection.Recommendations);
 
             Action act = () => builder.AddShow(null, 1, 2, 3, 4);
             act.ShouldThrow<ArgumentNullException>();
@@ -1019,7 +1019,7 @@
         // ----------------------------------------------------------------------------------------
 
         [TestMethod]
-        public void TestTraktUsersHiddenItemsPostBuilderAddShowWithSeasonsArray()
+        public void TestTraktUserHiddenItemsPostBuilderAddShowWithSeasonsArray()
         {
             var show1 = new TraktShow
             {
@@ -1038,7 +1038,7 @@
 
             var seasons = new int[] { 1 };
 
-            var builder = TraktUsersHiddenItemsPost.Builder(TraktHiddenItemsSection.Recommendations);
+            var builder = TraktUserHiddenItemsPost.Builder(TraktHiddenItemsSection.Recommendations);
 
             builder.AddShow(show1, seasons);
 
@@ -1235,9 +1235,9 @@
         }
 
         [TestMethod]
-        public void TestTraktUsersHiddenItemsPostBuilderAddShowWithSeasonsArrayArgumentExceptions()
+        public void TestTraktUserHiddenItemsPostBuilderAddShowWithSeasonsArrayArgumentExceptions()
         {
-            var builder = TraktUsersHiddenItemsPost.Builder(TraktHiddenItemsSection.Recommendations);
+            var builder = TraktUserHiddenItemsPost.Builder(TraktHiddenItemsSection.Recommendations);
 
             var seasons = new int[] { 1, 2, 3, 4 };
 
@@ -1274,7 +1274,7 @@
         // ----------------------------------------------------------------------------------------
 
         [TestMethod]
-        public void TestTraktUsersHiddenItemsPostBuilderReset()
+        public void TestTraktUserHiddenItemsPostBuilderReset()
         {
             var movie1 = new TraktMovie
             {
@@ -1315,7 +1315,7 @@
                 }
             };
 
-            var builder = TraktUsersHiddenItemsPost.Builder(TraktHiddenItemsSection.Recommendations);
+            var builder = TraktUserHiddenItemsPost.Builder(TraktHiddenItemsSection.Recommendations);
 
             var hiddenItemsPost = builder.AddMovie(movie1)
                                     .AddSeason(season1)
@@ -1338,7 +1338,7 @@
 
             // --------------------
 
-            builder = TraktUsersHiddenItemsPost.Builder(TraktHiddenItemsSection.ProgressWatched);
+            builder = TraktUserHiddenItemsPost.Builder(TraktHiddenItemsSection.ProgressWatched);
 
             hiddenItemsPost = builder.AddMovie(movie1)
                                 .AddSeason(season1)
@@ -1364,7 +1364,7 @@
         // ----------------------------------------------------------------------------------------
 
         [TestMethod]
-        public void TestTraktUsersHiddenItemsPostBuilderAddAll()
+        public void TestTraktUserHiddenItemsPostBuilderAddAll()
         {
             var movie1 = new TraktMovie
             {
@@ -1496,7 +1496,7 @@
                 }
             };
 
-            var builder = TraktUsersHiddenItemsPost.Builder(TraktHiddenItemsSection.Recommendations);
+            var builder = TraktUserHiddenItemsPost.Builder(TraktHiddenItemsSection.Recommendations);
 
             var hiddenItemsPost = builder.Build();
 
@@ -1525,7 +1525,7 @@
             // -----------------------------------------------------
             // -----------------------------------------------------
 
-            builder = TraktUsersHiddenItemsPost.Builder(TraktHiddenItemsSection.ProgressWatched);
+            builder = TraktUserHiddenItemsPost.Builder(TraktHiddenItemsSection.ProgressWatched);
 
             hiddenItemsPost = builder.Build();
 

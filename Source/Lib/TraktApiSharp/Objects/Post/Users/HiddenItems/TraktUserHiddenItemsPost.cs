@@ -13,66 +13,66 @@
     /// A Trakt hidden items post, containing all movies, shows and / or seasons,
     /// which should be added to the user's hidden items.
     /// </summary>
-    public class TraktUsersHiddenItemsPost
+    public class TraktUserHiddenItemsPost
     {
         /// <summary>
-        /// An optional list of <see cref="TraktUsersHiddenItemsPostMovie" />s.
-        /// <para>Each <see cref="TraktUsersHiddenItemsPostMovie" /> must have at least a valid Trakt id.</para>
+        /// An optional list of <see cref="TraktUserHiddenItemsPostMovie" />s.
+        /// <para>Each <see cref="TraktUserHiddenItemsPostMovie" /> must have at least a valid Trakt id.</para>
         /// </summary>
         [JsonProperty(PropertyName = "movies")]
-        public IEnumerable<TraktUsersHiddenItemsPostMovie> Movies { get; set; }
+        public IEnumerable<TraktUserHiddenItemsPostMovie> Movies { get; set; }
 
         /// <summary>
-        /// An optional list of <see cref="TraktUsersHiddenItemsPostShow" />s.
-        /// <para>Each <see cref="TraktUsersHiddenItemsPostShow" /> must have at least a valid Trakt id.</para>
+        /// An optional list of <see cref="TraktUserHiddenItemsPostShow" />s.
+        /// <para>Each <see cref="TraktUserHiddenItemsPostShow" /> must have at least a valid Trakt id.</para>
         /// </summary>
         [JsonProperty(PropertyName = "shows")]
-        public IEnumerable<TraktUsersHiddenItemsPostShow> Shows { get; set; }
+        public IEnumerable<TraktUserHiddenItemsPostShow> Shows { get; set; }
 
         /// <summary>
-        /// An optional list of <see cref="TraktUsersHiddenItemsPostSeason" />s.
-        /// <para>Each <see cref="TraktUsersHiddenItemsPostSeason" /> must have at least a valid Trakt id.</para>
+        /// An optional list of <see cref="TraktUserHiddenItemsPostSeason" />s.
+        /// <para>Each <see cref="TraktUserHiddenItemsPostSeason" /> must have at least a valid Trakt id.</para>
         /// </summary>
         [JsonProperty(PropertyName = "seasons")]
-        public IEnumerable<TraktUsersHiddenItemsPostSeason> Seasons { get; set; }
+        public IEnumerable<TraktUserHiddenItemsPostSeason> Seasons { get; set; }
 
-        /// <summary>Returns a new <see cref="TraktUsersHiddenItemsPostBuilder" /> instance.</summary>
+        /// <summary>Returns a new <see cref="TraktUserHiddenItemsPostBuilder" /> instance.</summary>
         /// <param name="section">The section of hidden items, where the added objects should be hidden or unhidden. See also <see cref="TraktHiddenItemsSection "/>.</param>
-        /// <returns>A new <see cref="TraktUsersHiddenItemsPostBuilder" /> instance.</returns>
-        public static TraktUsersHiddenItemsPostBuilder Builder(TraktHiddenItemsSection section) => new TraktUsersHiddenItemsPostBuilder(section);
+        /// <returns>A new <see cref="TraktUserHiddenItemsPostBuilder" /> instance.</returns>
+        public static TraktUserHiddenItemsPostBuilder Builder(TraktHiddenItemsSection section) => new TraktUserHiddenItemsPostBuilder(section);
     }
 
     /// <summary>
-    /// This is a helper class to build a <see cref="TraktUsersHiddenItemsPost" />.
+    /// This is a helper class to build a <see cref="TraktUserHiddenItemsPost" />.
     /// <para>
     /// It is recommended to use this class to build a hidden items post.<para /> 
-    /// An instance of this class can be obtained with <see cref="TraktUsersHiddenItemsPost.Builder(TraktHiddenItemsSection)" />.
+    /// An instance of this class can be obtained with <see cref="TraktUserHiddenItemsPost.Builder(TraktHiddenItemsSection)" />.
     /// </para>
     /// </summary>
-    public class TraktUsersHiddenItemsPostBuilder
+    public class TraktUserHiddenItemsPostBuilder
     {
         private TraktHiddenItemsSection _section;
-        private IEnumerable<TraktUsersHiddenItemsPostMovie> _movies;
-        private IEnumerable<TraktUsersHiddenItemsPostShow> _shows;
-        private IEnumerable<TraktUsersHiddenItemsPostSeason> _seasons;
+        private IEnumerable<TraktUserHiddenItemsPostMovie> _movies;
+        private IEnumerable<TraktUserHiddenItemsPostShow> _shows;
+        private IEnumerable<TraktUserHiddenItemsPostSeason> _seasons;
 
-        /// <summary>Initializes a new instance of the <see cref="TraktUsersHiddenItemsPost" /> class.</summary>
+        /// <summary>Initializes a new instance of the <see cref="TraktUserHiddenItemsPost" /> class.</summary>
         /// <param name="section">The section of hidden items, where the added objects should be hidden or unhidden. See also <see cref="TraktHiddenItemsSection "/>.</param>
         /// <exception cref="ArgumentNullException">Thrown, if the given section is null.</exception>
         /// <exception cref="ArgumentException">Thrown, if the given section is unspecified.</exception>
-        public TraktUsersHiddenItemsPostBuilder(TraktHiddenItemsSection section)
+        public TraktUserHiddenItemsPostBuilder(TraktHiddenItemsSection section)
         {
             SetSection(section);
-            _movies = new List<TraktUsersHiddenItemsPostMovie>();
-            _shows = new List<TraktUsersHiddenItemsPostShow>();
-            _seasons = new List<TraktUsersHiddenItemsPostSeason>();
+            _movies = new List<TraktUserHiddenItemsPostMovie>();
+            _shows = new List<TraktUserHiddenItemsPostShow>();
+            _seasons = new List<TraktUserHiddenItemsPostSeason>();
         }
 
         internal TraktHiddenItemsSection Section => _section;
 
         /// <summary>Adds a <see cref="TraktMovie" />, which will be added to the hidden items post.</summary>
         /// <param name="movie">The Trakt movie, which will be added.</param>
-        /// <returns>The current <see cref="TraktUsersHiddenItemsPostBuilder" /> instance.</returns>
+        /// <returns>The current <see cref="TraktUserHiddenItemsPostBuilder" /> instance.</returns>
         /// <exception cref="ArgumentNullException">
         /// Thrown, if the given movie is null.
         /// Thrown, if the given movie ids are null.
@@ -81,7 +81,7 @@
         /// Thrown, if the given movie has no valid ids set.
         /// Thrown, if the given movie has an year set, which has more or less than four digits.
         /// </exception>
-        public TraktUsersHiddenItemsPostBuilder AddMovie(TraktMovie movie)
+        public TraktUserHiddenItemsPostBuilder AddMovie(TraktMovie movie)
         {
             if (!IsSectionValidForMovies)
                 return this;
@@ -94,7 +94,7 @@
 
         /// <summary>Adds a collection of <see cref="TraktMovie" />s, which will be added to the hidden items post.</summary>
         /// <param name="movies">A collection of Trakt movies, which will be added.</param>
-        /// <returns>The current <see cref="TraktUsersHiddenItemsPostBuilder" /> instance.</returns>
+        /// <returns>The current <see cref="TraktUserHiddenItemsPostBuilder" /> instance.</returns>
         /// <exception cref="ArgumentNullException">
         /// Thrown, if the given movies collection is null.
         /// Thrown, if one of the given movies is null.
@@ -104,7 +104,7 @@
         /// Thrown, if one of the given movies has no valid ids set.
         /// Thrown, if one of the given movies has an year set, which has more or less than four digits.
         /// </exception>
-        public TraktUsersHiddenItemsPostBuilder AddMovies(IEnumerable<TraktMovie> movies)
+        public TraktUserHiddenItemsPostBuilder AddMovies(IEnumerable<TraktMovie> movies)
         {
             if (!IsSectionValidForMovies)
                 return this;
@@ -123,7 +123,7 @@
 
         /// <summary>Adds a <see cref="TraktShow" />, which will be added to the hidden items post.</summary>
         /// <param name="show">The Trakt show, which will be added.</param>
-        /// <returns>The current <see cref="TraktUsersHiddenItemsPostBuilder" /> instance.</returns>
+        /// <returns>The current <see cref="TraktUserHiddenItemsPostBuilder" /> instance.</returns>
         /// <exception cref="ArgumentNullException">
         /// Thrown, if the given show is null.
         /// Thrown, if the given show ids are null.
@@ -132,7 +132,7 @@
         /// Thrown, if the given show has no valid ids set.
         /// Thrown, if the given show has an year set, which has more or less than four digits.
         /// </exception>
-        public TraktUsersHiddenItemsPostBuilder AddShow(TraktShow show)
+        public TraktUserHiddenItemsPostBuilder AddShow(TraktShow show)
         {
             if (!IsSectionValidForShows)
                 return this;
@@ -145,7 +145,7 @@
 
         /// <summary>Adds a collection of <see cref="TraktShow" />s, which will be added to the hidden items post.</summary>
         /// <param name="shows">A collection of Trakt shows, which will be added.</param>
-        /// <returns>The current <see cref="TraktUsersHiddenItemsPostBuilder" /> instance.</returns>
+        /// <returns>The current <see cref="TraktUserHiddenItemsPostBuilder" /> instance.</returns>
         /// <exception cref="ArgumentNullException">
         /// Thrown, if the given shows collection is null.
         /// Thrown, if one of the given shows is null.
@@ -155,7 +155,7 @@
         /// Thrown, if one of the given shows has no valid ids set.
         /// Thrown, if one of the given shows has an year set, which has more or less than four digits.
         /// </exception>
-        public TraktUsersHiddenItemsPostBuilder AddShows(IEnumerable<TraktShow> shows)
+        public TraktUserHiddenItemsPostBuilder AddShows(IEnumerable<TraktShow> shows)
         {
             if (!IsSectionValidForShows)
                 return this;
@@ -181,7 +181,7 @@
         /// An optional array of season numbers for seasons in the given show.
         /// The complete seasons will be added to the hidden items.
         /// </param>
-        /// <returns>The current <see cref="TraktUsersHiddenItemsPostBuilder" /> instance.</returns>
+        /// <returns>The current <see cref="TraktUserHiddenItemsPostBuilder" /> instance.</returns>
         /// <exception cref="ArgumentNullException">
         /// Thrown, if the given show is null.
         /// Thrown, if the given show ids are null.
@@ -193,7 +193,7 @@
         /// <exception cref="ArgumentOutOfRangeException">
         /// Thrown, if at least one of the given season numbers is below zero.
         /// </exception>
-        public TraktUsersHiddenItemsPostBuilder AddShow(TraktShow show, int season, params int[] seasons)
+        public TraktUserHiddenItemsPostBuilder AddShow(TraktShow show, int season, params int[] seasons)
         {
             if (!IsSectionValidForShows)
                 return this;
@@ -213,7 +213,7 @@
         /// An array of season numbers for seasons in the given show.
         /// The complete seasons will be added to the hidden items.
         /// </param>
-        /// <returns>The current <see cref="TraktUsersHiddenItemsPostBuilder" /> instance.</returns>
+        /// <returns>The current <see cref="TraktUserHiddenItemsPostBuilder" /> instance.</returns>
         /// <exception cref="ArgumentNullException">
         /// Thrown, if the given show is null.
         /// Thrown, if the given show ids are null.
@@ -226,7 +226,7 @@
         /// <exception cref="ArgumentOutOfRangeException">
         /// Thrown, if at least one of the given season numbers is below zero.
         /// </exception>
-        public TraktUsersHiddenItemsPostBuilder AddShow(TraktShow show, int[] seasons)
+        public TraktUserHiddenItemsPostBuilder AddShow(TraktShow show, int[] seasons)
         {
             if (!IsSectionValidForShows)
                 return this;
@@ -242,13 +242,13 @@
 
         /// <summary>Adds a <see cref="TraktSeason" />, which will be added to the hidden items post.</summary>
         /// <param name="season">The Trakt season, which will be added.</param>
-        /// <returns>The current <see cref="TraktUsersHiddenItemsPostBuilder" /> instance.</returns>
+        /// <returns>The current <see cref="TraktUserHiddenItemsPostBuilder" /> instance.</returns>
         /// <exception cref="ArgumentNullException">
         /// Thrown, if the given season is null.
         /// Thrown, if the given season ids are null.
         /// </exception>
         /// <exception cref="ArgumentException">Thrown, if the given season has no valid ids set.</exception>
-        public TraktUsersHiddenItemsPostBuilder AddSeason(TraktSeason season)
+        public TraktUserHiddenItemsPostBuilder AddSeason(TraktSeason season)
         {
             if (!IsSectionValidForSeasons)
                 return this;
@@ -261,14 +261,14 @@
 
         /// <summary>Adds a collection of <see cref="TraktSeason" />s, which will be added to the hidden items post.</summary>
         /// <param name="seasons">A collection of Trakt seasons, which will be added.</param>
-        /// <returns>The current <see cref="TraktUsersHiddenItemsPostBuilder" /> instance.</returns>
+        /// <returns>The current <see cref="TraktUserHiddenItemsPostBuilder" /> instance.</returns>
         /// <exception cref="ArgumentNullException">
         /// Thrown, if the given episodes collection is null.
         /// Thrown, if one of the given seasons is null.
         /// Thrown, if one of the given seasons' ids are null.
         /// </exception>
         /// <exception cref="ArgumentException">Thrown, if one of the given seasons has no valid ids set.</exception>
-        public TraktUsersHiddenItemsPostBuilder AddSeasons(IEnumerable<TraktSeason> seasons)
+        public TraktUserHiddenItemsPostBuilder AddSeasons(IEnumerable<TraktSeason> seasons)
         {
             if (!IsSectionValidForSeasons)
                 return this;
@@ -289,24 +289,24 @@
         /// <param name="section">The section of hidden items, where the added objects should be hidden or unhidden. See also <see cref="TraktHiddenItemsSection "/>.</param>
         /// <exception cref="ArgumentNullException">Thrown, if the given section is null.</exception>
         /// <exception cref="ArgumentException">Thrown, if the given section is unspecified.</exception>
-        public TraktUsersHiddenItemsPostBuilder Reset(TraktHiddenItemsSection section)
+        public TraktUserHiddenItemsPostBuilder Reset(TraktHiddenItemsSection section)
         {
             SetSection(section);
-            _movies = new List<TraktUsersHiddenItemsPostMovie>();
-            _shows = new List<TraktUsersHiddenItemsPostShow>();
-            _seasons = new List<TraktUsersHiddenItemsPostSeason>();
+            _movies = new List<TraktUserHiddenItemsPostMovie>();
+            _shows = new List<TraktUserHiddenItemsPostShow>();
+            _seasons = new List<TraktUserHiddenItemsPostSeason>();
 
             return this;
         }
 
         /// <summary>
-        /// Returns an <see cref="TraktUsersHiddenItemsPost" /> instance, which contains all
+        /// Returns an <see cref="TraktUserHiddenItemsPost" /> instance, which contains all
         /// added movies, shows and seasons.
         /// </summary>
-        /// <returns>An <see cref="TraktUsersHiddenItemsPost" /> instance.</returns>
-        public TraktUsersHiddenItemsPost Build()
+        /// <returns>An <see cref="TraktUserHiddenItemsPost" /> instance.</returns>
+        public TraktUserHiddenItemsPost Build()
         {
-            return new TraktUsersHiddenItemsPost
+            return new TraktUserHiddenItemsPost
             {
                 Movies = _movies.Count() > 0 ? _movies : null,
                 Shows = _shows.Count() > 0 ? _shows : null,
@@ -382,7 +382,7 @@
         private void EnsureMoviesListExists()
         {
             if (_movies == null)
-                _movies = new List<TraktUsersHiddenItemsPostMovie>();
+                _movies = new List<TraktUserHiddenItemsPostMovie>();
         }
 
         private bool ContainsShow(TraktShow show) => _shows.Where(s => s.Ids == show.Ids).FirstOrDefault() != null;
@@ -390,7 +390,7 @@
         private void EnsureShowsListExists()
         {
             if (_shows == null)
-                _shows = new List<TraktUsersHiddenItemsPostShow>();
+                _shows = new List<TraktUserHiddenItemsPostShow>();
         }
 
         private bool ContainsSeason(TraktSeason season) => _seasons.Where(s => s.Ids == season.Ids).FirstOrDefault() != null;
@@ -398,59 +398,59 @@
         private void EnsureSeasonsListExists()
         {
             if (_seasons == null)
-                _seasons = new List<TraktUsersHiddenItemsPostSeason>();
+                _seasons = new List<TraktUserHiddenItemsPostSeason>();
         }
 
-        private TraktUsersHiddenItemsPostBuilder AddMovieOrIgnore(TraktMovie movie)
+        private TraktUserHiddenItemsPostBuilder AddMovieOrIgnore(TraktMovie movie)
         {
             if (ContainsMovie(movie))
                 return this;
 
-            var hiddenItemMovie = new TraktUsersHiddenItemsPostMovie()
+            var hiddenItemMovie = new TraktUserHiddenItemsPostMovie()
             {
                 Ids = movie.Ids,
                 Title = movie.Title,
                 Year = movie.Year
             };
 
-            (_movies as List<TraktUsersHiddenItemsPostMovie>).Add(hiddenItemMovie);
+            (_movies as List<TraktUserHiddenItemsPostMovie>).Add(hiddenItemMovie);
 
             return this;
         }
 
-        private TraktUsersHiddenItemsPostBuilder AddShowOrIgnore(TraktShow show)
+        private TraktUserHiddenItemsPostBuilder AddShowOrIgnore(TraktShow show)
         {
             if (ContainsShow(show))
                 return this;
 
-            var hiddenItemShow = new TraktUsersHiddenItemsPostShow()
+            var hiddenItemShow = new TraktUserHiddenItemsPostShow()
             {
                 Ids = show.Ids,
                 Title = show.Title,
                 Year = show.Year
             };
 
-            (_shows as List<TraktUsersHiddenItemsPostShow>).Add(hiddenItemShow);
+            (_shows as List<TraktUserHiddenItemsPostShow>).Add(hiddenItemShow);
 
             return this;
         }
 
-        private TraktUsersHiddenItemsPostBuilder AddSeasonOrIgnore(TraktSeason season)
+        private TraktUserHiddenItemsPostBuilder AddSeasonOrIgnore(TraktSeason season)
         {
             if (ContainsSeason(season))
                 return this;
 
-            var hiddenItemSeason = new TraktUsersHiddenItemsPostSeason()
+            var hiddenItemSeason = new TraktUserHiddenItemsPostSeason()
             {
                 Ids = season.Ids
             };
 
-            (_seasons as List<TraktUsersHiddenItemsPostSeason>).Add(hiddenItemSeason);
+            (_seasons as List<TraktUserHiddenItemsPostSeason>).Add(hiddenItemSeason);
 
             return this;
         }
 
-        private void CreateOrSetShow(TraktShow show, IEnumerable<TraktUsersHiddenItemsPostShowSeason> showSeasons,
+        private void CreateOrSetShow(TraktShow show, IEnumerable<TraktUserHiddenItemsPostShowSeason> showSeasons,
                                        DateTime? watchedAt = null)
         {
             var existingShow = _shows.Where(s => s.Ids == show.Ids).FirstOrDefault();
@@ -459,7 +459,7 @@
                 existingShow.Seasons = showSeasons;
             else
             {
-                var hiddenItemsShow = new TraktUsersHiddenItemsPostShow()
+                var hiddenItemsShow = new TraktUserHiddenItemsPostShow()
                 {
                     Ids = show.Ids,
                     Title = show.Title,
@@ -467,42 +467,42 @@
                     Seasons = showSeasons
                 };
 
-                (_shows as List<TraktUsersHiddenItemsPostShow>).Add(hiddenItemsShow);
+                (_shows as List<TraktUserHiddenItemsPostShow>).Add(hiddenItemsShow);
             }
         }
 
-        private IEnumerable<TraktUsersHiddenItemsPostShowSeason> CreateShowSeasons(int season, params int[] seasons)
+        private IEnumerable<TraktUserHiddenItemsPostShowSeason> CreateShowSeasons(int season, params int[] seasons)
         {
             var seasonsToAdd = new int[seasons.Length + 1];
             seasonsToAdd[0] = season;
             seasons.CopyTo(seasonsToAdd, 1);
 
-            var showSeasons = new List<TraktUsersHiddenItemsPostShowSeason>();
+            var showSeasons = new List<TraktUserHiddenItemsPostShowSeason>();
 
             for (int i = 0; i < seasonsToAdd.Length; i++)
             {
                 if (seasonsToAdd[i] < 0)
                     throw new ArgumentOutOfRangeException("at least one season number not valid");
 
-                showSeasons.Add(new TraktUsersHiddenItemsPostShowSeason { Number = seasonsToAdd[i] });
+                showSeasons.Add(new TraktUserHiddenItemsPostShowSeason { Number = seasonsToAdd[i] });
             }
 
             return showSeasons;
         }
 
-        private IEnumerable<TraktUsersHiddenItemsPostShowSeason> CreateShowSeasons(int[] seasons)
+        private IEnumerable<TraktUserHiddenItemsPostShowSeason> CreateShowSeasons(int[] seasons)
         {
             if (seasons == null)
                 throw new ArgumentNullException(nameof(seasons));
 
-            var showSeasons = new List<TraktUsersHiddenItemsPostShowSeason>();
+            var showSeasons = new List<TraktUserHiddenItemsPostShowSeason>();
 
             for (int i = 0; i < seasons.Length; i++)
             {
                 if (seasons[i] < 0)
                     throw new ArgumentOutOfRangeException("at least one season number not valid");
 
-                showSeasons.Add(new TraktUsersHiddenItemsPostShowSeason { Number = seasons[i] });
+                showSeasons.Add(new TraktUserHiddenItemsPostShowSeason { Number = seasons[i] });
             }
 
             return showSeasons;

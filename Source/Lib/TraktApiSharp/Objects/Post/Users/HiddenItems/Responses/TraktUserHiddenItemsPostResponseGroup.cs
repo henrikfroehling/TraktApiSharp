@@ -3,7 +3,7 @@
     using Newtonsoft.Json;
 
     /// <summary>A collection containing the number of movies, shows and seasons.</summary>
-    public class TraktUsersHiddenItemsPostResponseGroup
+    public class TraktUserHiddenItemsPostResponseGroup
     {
         /// <summary>Gets or sets the number of movies.</summary>
         [JsonProperty(PropertyName = "movies")]

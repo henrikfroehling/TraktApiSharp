@@ -3,7 +3,7 @@
     using Newtonsoft.Json;
 
     /// <summary>A Trakt hidden items post season, containing the required season number.</summary>
-    public class TraktUsersHiddenItemsPostShowSeason
+    public class TraktUserHiddenItemsPostShowSeason
     {
         /// <summary>Gets or sets the required season number of the Trakt season.</summary>
         [JsonProperty(PropertyName = "number")]

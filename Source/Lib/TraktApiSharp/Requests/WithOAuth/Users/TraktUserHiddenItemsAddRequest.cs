@@ -6,7 +6,7 @@
     using Objects.Post.Users.HiddenItems.Responses;
     using System.Collections.Generic;
 
-    internal class TraktUserHiddenItemsAddRequest : TraktPostRequest<TraktUsersHiddenItemsPostResponse, TraktUsersHiddenItemsPostResponse, TraktUsersHiddenItemsPost>
+    internal class TraktUserHiddenItemsAddRequest : TraktPostRequest<TraktUserHiddenItemsPostResponse, TraktUserHiddenItemsPostResponse, TraktUserHiddenItemsPost>
     {
         internal TraktUserHiddenItemsAddRequest(TraktClient client) : base(client) { }
 

@@ -8,25 +8,25 @@
     using Utils;
 
     [TestClass]
-    public class TraktUsersHiddenItemsRemovePostResponseTests
+    public class TraktUserHiddenItemsRemovePostResponseTests
     {
         [TestMethod]
-        public void TestTraktUsersHiddenItemsRemovePostResponseDefaultConstructor()
+        public void TestTraktUserHiddenItemsRemovePostResponseDefaultConstructor()
         {
-            var hiddenItemsRemovePost = new TraktUsersHiddenItemsRemovePostResponse();
+            var hiddenItemsRemovePost = new TraktUserHiddenItemsRemovePostResponse();
 
             hiddenItemsRemovePost.Deleted.Should().BeNull();
             hiddenItemsRemovePost.NotFound.Should().BeNull();
         }
 
         [TestMethod]
-        public void TestTraktUsersHiddenItemsRemovePostResponseReadFromJson()
+        public void TestTraktUserHiddenItemsRemovePostResponseReadFromJson()
         {
-            var jsonFile = TestUtility.ReadFileContents(@"Objects\Post\Users\HiddenItems\Responses\UsersHiddenItemsRemovePostResponse.json");
+            var jsonFile = TestUtility.ReadFileContents(@"Objects\Post\Users\HiddenItems\Responses\UserHiddenItemsRemovePostResponse.json");
 
             jsonFile.Should().NotBeNullOrEmpty();
 
-            var hiddenItemsRemovePost = JsonConvert.DeserializeObject<TraktUsersHiddenItemsRemovePostResponse>(jsonFile);
+            var hiddenItemsRemovePost = JsonConvert.DeserializeObject<TraktUserHiddenItemsRemovePostResponse>(jsonFile);
 
             hiddenItemsRemovePost.Should().NotBeNull();
 

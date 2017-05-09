@@ -7,7 +7,7 @@
     /// A Trakt hidden items post season, containing the required season ids.
     /// <para>Can also contain optional seasons.</para>
     /// </summary>
-    public class TraktUsersHiddenItemsPostSeason
+    public class TraktUserHiddenItemsPostSeason
     {
         /// <summary>Gets or sets the required show ids. See also <seealso cref="TraktSeasonIds" />.</summary>
         [JsonProperty(PropertyName = "ids")]

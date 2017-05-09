@@ -16,7 +16,7 @@
         [TestMethod]
         public void TestTraktUserHiddenItemsPostDefaultConstructor()
         {
-            var hiddenItems = new TraktUsersHiddenItemsPost();
+            var hiddenItems = new TraktUserHiddenItemsPost();
 
             hiddenItems.Movies.Should().BeNull();
             hiddenItems.Shows.Should().BeNull();
@@ -26,11 +26,11 @@
         [TestMethod]
         public void TestTraktUserHiddenItemsPostWriteJson()
         {
-            var hiddenItems = new TraktUsersHiddenItemsPost
+            var hiddenItems = new TraktUserHiddenItemsPost
             {
-                Movies = new List<TraktUsersHiddenItemsPostMovie>()
+                Movies = new List<TraktUserHiddenItemsPostMovie>()
                 {
-                    new TraktUsersHiddenItemsPostMovie
+                    new TraktUserHiddenItemsPostMovie
                     {
                         Title = "Batman Begins",
                         Year = 2005,
@@ -42,7 +42,7 @@
                             Tmdb = 272
                         }
                     },
-                    new TraktUsersHiddenItemsPostMovie
+                    new TraktUserHiddenItemsPostMovie
                     {
                         Ids = new TraktMovieIds
                         {
@@ -50,9 +50,9 @@
                         }
                     }
                 },
-                Shows = new List<TraktUsersHiddenItemsPostShow>()
+                Shows = new List<TraktUserHiddenItemsPostShow>()
                 {
-                    new TraktUsersHiddenItemsPostShow
+                    new TraktUserHiddenItemsPostShow
                     {
                         Title = "Breaking Bad",
                         Year = 2008,
@@ -66,7 +66,7 @@
                             TvRage = 18164
                         }
                     },
-                    new TraktUsersHiddenItemsPostShow
+                    new TraktUserHiddenItemsPostShow
                     {
                         Title = "The Walking Dead",
                         Year = 2010,
@@ -79,15 +79,15 @@
                             Tmdb = 1402,
                             TvRage = 25056
                         },
-                        Seasons = new List<TraktUsersHiddenItemsPostShowSeason>()
+                        Seasons = new List<TraktUserHiddenItemsPostShowSeason>()
                         {
-                            new TraktUsersHiddenItemsPostShowSeason
+                            new TraktUserHiddenItemsPostShowSeason
                             {
                                 Number = 3
                             }
                         }
                     },
-                    new TraktUsersHiddenItemsPostShow
+                    new TraktUserHiddenItemsPostShow
                     {
                         Title = "Mad Men",
                         Year = 2007,
@@ -100,18 +100,18 @@
                             Tmdb = 1104,
                             TvRage = 16356
                         },
-                        Seasons = new List<TraktUsersHiddenItemsPostShowSeason>()
+                        Seasons = new List<TraktUserHiddenItemsPostShowSeason>()
                         {
-                            new TraktUsersHiddenItemsPostShowSeason
+                            new TraktUserHiddenItemsPostShowSeason
                             {
                                 Number = 1
                             }
                         }
                     }
                 },
-                Seasons = new List<TraktUsersHiddenItemsPostSeason>()
+                Seasons = new List<TraktUserHiddenItemsPostSeason>()
                 {
-                    new TraktUsersHiddenItemsPostSeason
+                    new TraktUserHiddenItemsPostSeason
                     {
                         Ids = new TraktSeasonIds
                         {
@@ -128,7 +128,7 @@
 
             strJson.Should().NotBeNullOrEmpty();
 
-            var hiddenItemsPostFromJson = JsonConvert.DeserializeObject<TraktUsersHiddenItemsPost>(strJson);
+            var hiddenItemsPostFromJson = JsonConvert.DeserializeObject<TraktUserHiddenItemsPost>(strJson);
 
             hiddenItemsPostFromJson.Should().NotBeNull();
 

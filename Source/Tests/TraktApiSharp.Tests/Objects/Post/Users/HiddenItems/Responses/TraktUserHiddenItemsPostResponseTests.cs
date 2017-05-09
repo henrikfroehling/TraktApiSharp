@@ -8,25 +8,25 @@
     using Utils;
 
     [TestClass]
-    public class TraktUsersHiddenItemsPostResponseTests
+    public class TraktUserHiddenItemsPostResponseTests
     {
         [TestMethod]
-        public void TestTraktUsersHiddenItemsPostResponseDefaultConstructor()
+        public void TestTraktUserHiddenItemsPostResponseDefaultConstructor()
         {
-            var hiddenItemsPostResponse = new TraktUsersHiddenItemsPostResponse();
+            var hiddenItemsPostResponse = new TraktUserHiddenItemsPostResponse();
 
             hiddenItemsPostResponse.Added.Should().BeNull();
             hiddenItemsPostResponse.NotFound.Should().BeNull();
         }
 
         [TestMethod]
-        public void TestTraktUsersHiddenItemsPostResponseReadFromJson()
+        public void TestTraktUserHiddenItemsPostResponseReadFromJson()
         {
-            var jsonFile = TestUtility.ReadFileContents(@"Objects\Post\Users\HiddenItems\Responses\UsersHiddenItemsPostResponse.json");
+            var jsonFile = TestUtility.ReadFileContents(@"Objects\Post\Users\HiddenItems\Responses\UserHiddenItemsPostResponse.json");
 
             jsonFile.Should().NotBeNullOrEmpty();
 
-            var hiddenItemsPostResponse = JsonConvert.DeserializeObject<TraktUsersHiddenItemsPostResponse>(jsonFile);
+            var hiddenItemsPostResponse = JsonConvert.DeserializeObject<TraktUserHiddenItemsPostResponse>(jsonFile);
 
             hiddenItemsPostResponse.Should().NotBeNull();
 
