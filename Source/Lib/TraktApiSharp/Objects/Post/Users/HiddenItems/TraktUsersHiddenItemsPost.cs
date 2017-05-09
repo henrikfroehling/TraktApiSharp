@@ -68,6 +68,8 @@
             _seasons = new List<TraktUsersHiddenItemsPostSeason>();
         }
 
+        internal TraktHiddenItemsSection Section => _section;
+
         /// <summary>Adds a <see cref="TraktMovie" />, which will be added to the hidden items post.</summary>
         /// <param name="movie">The Trakt movie, which will be added.</param>
         /// <returns>The current <see cref="TraktUsersHiddenItemsPostBuilder" /> instance.</returns>
