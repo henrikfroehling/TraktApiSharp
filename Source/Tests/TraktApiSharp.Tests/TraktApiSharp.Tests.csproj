@@ -138,6 +138,7 @@
     <Compile Include="Objects\Post\Users\HiddenItems\Responses\TraktUsersHiddenItemsPostResponseTests.cs" />
     <Compile Include="Objects\Post\Users\HiddenItems\Responses\TraktUsersHiddenItemsRemovePostResponseTests.cs" />
     <Compile Include="Objects\Post\Users\HiddenItems\TraktUserHiddenItemsPostTests.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\TraktUsersHiddenItemsPostBuilderTests.cs" />
     <Compile Include="Requests\Base\Delete\TraktDeleteByIdRequestTests.cs" />
     <Compile Include="Requests\Base\Delete\TraktDeleteRequestTests.cs" />
     <Compile Include="Requests\Base\Get\TraktGetByIdRequestTests.cs" />
@@ -555,7 +556,6 @@
     <None Include="TestData\Objects\Post\Users\HiddenItems\Responses\UsersHiddenItemsRemovePostResponse.json" />
     <None Include="TestData\Objects\Post\Users\Responses\FollowUserPostResponse.json" />
   </ItemGroup>
-  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
