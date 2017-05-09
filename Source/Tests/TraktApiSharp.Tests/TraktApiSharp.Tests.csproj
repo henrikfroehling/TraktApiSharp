@@ -135,6 +135,8 @@
     <Compile Include="Objects\Post\Syncs\Ratings\TraktSyncRatingsPostBuilderTests.cs" />
     <Compile Include="Objects\Post\Syncs\Watchlist\TraktSyncWatchlistPostBuilderTests.cs" />
     <Compile Include="Objects\Post\Users\CustomListItems\TraktUserCustomListItemsPostBuilderTests.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\Responses\TraktUsersHiddenItemsPostResponseTests.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\Responses\TraktUsersHiddenItemsRemovePostResponseTests.cs" />
     <Compile Include="Objects\Post\Users\HiddenItems\TraktUserHiddenItemsPostTests.cs" />
     <Compile Include="Requests\Base\Delete\TraktDeleteByIdRequestTests.cs" />
     <Compile Include="Requests\Base\Delete\TraktDeleteRequestTests.cs" />
@@ -549,6 +551,8 @@
     <None Include="TestData\Objects\Post\Syncs\Watchlist\Responses\SyncWatchlistRemovePostResponse.json" />
     <None Include="TestData\Objects\Post\Users\CustomListItems\Responses\UserCustomListItemsPostResponse.json" />
     <None Include="TestData\Objects\Post\Users\CustomListItems\Responses\UserCustomListItemsRemovePostResponse.json" />
+    <None Include="TestData\Objects\Post\Users\HiddenItems\Responses\UsersHiddenItemsPostResponse.json" />
+    <None Include="TestData\Objects\Post\Users\HiddenItems\Responses\UsersHiddenItemsRemovePostResponse.json" />
     <None Include="TestData\Objects\Post\Users\Responses\FollowUserPostResponse.json" />
   </ItemGroup>
   <ItemGroup />

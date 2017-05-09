@@ -332,6 +332,7 @@
     <Compile Include="Objects\Post\Users\HiddenItems\Responses\TraktUsersHiddenItemsPostResponseGroup.cs" />
     <Compile Include="Objects\Post\Users\HiddenItems\Responses\TraktUsersHiddenItemsPostResponseNotFound.cs" />
     <Compile Include="Objects\Post\Users\HiddenItems\Responses\TraktUsersHiddenItemsPostResponseNotFoundItem.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\Responses\TraktUsersHiddenItemsRemovePostResponse.cs" />
     <Compile Include="Objects\Post\Users\HiddenItems\TraktUsersHiddenItemsPost.cs" />
     <Compile Include="Objects\Post\Users\HiddenItems\TraktUsersHiddenItemsPostMovie.cs" />
     <Compile Include="Objects\Post\Users\HiddenItems\TraktUsersHiddenItemsPostSeason.cs" />
