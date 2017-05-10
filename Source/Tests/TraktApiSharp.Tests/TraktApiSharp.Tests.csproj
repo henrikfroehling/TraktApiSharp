@@ -135,6 +135,10 @@
     <Compile Include="Objects\Post\Syncs\Ratings\TraktSyncRatingsPostBuilderTests.cs" />
     <Compile Include="Objects\Post\Syncs\Watchlist\TraktSyncWatchlistPostBuilderTests.cs" />
     <Compile Include="Objects\Post\Users\CustomListItems\TraktUserCustomListItemsPostBuilderTests.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\Responses\TraktUserHiddenItemsPostResponseTests.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\Responses\TraktUserHiddenItemsRemovePostResponseTests.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\TraktUserHiddenItemsPostTests.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\TraktUserHiddenItemsPostBuilderTests.cs" />
     <Compile Include="Requests\Base\Delete\TraktDeleteByIdRequestTests.cs" />
     <Compile Include="Requests\Base\Delete\TraktDeleteRequestTests.cs" />
     <Compile Include="Requests\Base\Get\TraktGetByIdRequestTests.cs" />
@@ -548,9 +552,10 @@
     <None Include="TestData\Objects\Post\Syncs\Watchlist\Responses\SyncWatchlistRemovePostResponse.json" />
     <None Include="TestData\Objects\Post\Users\CustomListItems\Responses\UserCustomListItemsPostResponse.json" />
     <None Include="TestData\Objects\Post\Users\CustomListItems\Responses\UserCustomListItemsRemovePostResponse.json" />
+    <None Include="TestData\Objects\Post\Users\HiddenItems\Responses\UserHiddenItemsPostResponse.json" />
+    <None Include="TestData\Objects\Post\Users\HiddenItems\Responses\UserHiddenItemsRemovePostResponse.json" />
     <None Include="TestData\Objects\Post\Users\Responses\FollowUserPostResponse.json" />
   </ItemGroup>
-  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

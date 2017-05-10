@@ -328,6 +328,16 @@
     <Compile Include="Objects\Post\Users\CustomListItems\TraktUserCustomListItemsPostShowEpisode.cs" />
     <Compile Include="Objects\Post\Users\CustomListItems\TraktUserCustomListItemsPostShow.cs" />
     <Compile Include="Objects\Post\Users\CustomListItems\TraktUserCustomListItemsPostShowSeason.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\Responses\TraktUserHiddenItemsPostResponse.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\Responses\TraktUserHiddenItemsPostResponseGroup.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\Responses\TraktUserHiddenItemsPostResponseNotFound.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\Responses\TraktUserHiddenItemsPostResponseNotFoundItem.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\Responses\TraktUserHiddenItemsRemovePostResponse.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\TraktUserHiddenItemsPost.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\TraktUserHiddenItemsPostMovie.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\TraktUserHiddenItemsPostSeason.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\TraktUserHiddenItemsPostShow.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\TraktUserHiddenItemsPostShowSeason.cs" />
     <Compile Include="Objects\Post\Users\Responses\TraktUserFollowUserPostResponse.cs" />
     <Compile Include="Objects\Post\Users\CustomListItems\TraktUserCustomListItemsPost.cs" />
     <Compile Include="Objects\Post\Users\TraktUserCustomListPost.cs" />
@@ -336,6 +346,8 @@
     <Compile Include="Requests\Params\TraktCalendarFilter.cs" />
     <Compile Include="Modules\TraktMultipleQueryParams.cs" />
     <Compile Include="Requests\WithOAuth\Calendars\TraktCalendarUserDVDMoviesRequest.cs" />
+    <Compile Include="Requests\WithOAuth\Users\TraktUserHiddenItemsAddRequest.cs" />
+    <Compile Include="Requests\WithOAuth\Users\TraktUserHiddenItemsRemoveRequest.cs" />
     <Compile Include="Requests\WithoutOAuth\Calendars\TraktCalendarAllDVDMoviesRequest.cs" />
     <Compile Include="Requests\WithoutOAuth\Movies\TraktMovieListsRequest.cs" />
     <Compile Include="Requests\WithoutOAuth\Shows\Episodes\TraktEpisodeListsRequest.cs" />

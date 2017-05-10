@@ -16,6 +16,8 @@
     using Objects.Post.Users;
     using Objects.Post.Users.CustomListItems;
     using Objects.Post.Users.CustomListItems.Responses;
+    using Objects.Post.Users.HiddenItems;
+    using Objects.Post.Users.HiddenItems.Responses;
     using Objects.Post.Users.Responses;
     using Requests;
     using Requests.Params;
@@ -105,6 +107,60 @@
                 Type = hiddenItemType,
                 ExtendedInfo = extendedInfo,
                 PaginationOptions = new TraktPaginationOptions(page, limitPerPage)
+            });
+        }
+
+        /// <summary>
+        /// Hides items, like movies, shows and / or seasons, for a specific section.
+        /// <para>OAuth authorization required.</para>
+        /// <para>
+        /// See <a href="http://docs.trakt.apiary.io/#reference/users/add-hidden-items/add-hidden-items">"Trakt API Doc - Users: Add Hidden Items"</a> for more information.
+        /// </para>
+        /// </summary>
+        /// <param name="hiddenItemsPostBuilder">
+        /// The builder for the hidden items post.
+        /// See also <seealso cref="TraktUserHiddenItemsPostBuilder" /> and <seealso cref="TraktUserHiddenItemsPost.Builder(TraktHiddenItemsSection)" />.
+        /// </param>
+        /// <returns>An <see cref="TraktUserHiddenItemsPostResponse" /> instance, which contains information about which items were added and not found.</returns>
+        /// <exception cref="TraktException">Thrown, if the request fails.</exception>
+        /// <exception cref="ArgumentNullException">Thrown, if the given hidden items post builder is null.</exception>
+        [OAuthAuthorizationRequired]
+        public async Task<TraktUserHiddenItemsPostResponse> AddHiddenItemsAsync(TraktUserHiddenItemsPostBuilder hiddenItemsPostBuilder)
+        {
+            if (hiddenItemsPostBuilder == null)
+                throw new ArgumentNullException(nameof(hiddenItemsPostBuilder));
+
+            return await QueryAsync(new TraktUserHiddenItemsAddRequest(Client)
+            {
+                Section = hiddenItemsPostBuilder.Section,
+                RequestBody = hiddenItemsPostBuilder.Build()
+            });
+        }
+
+        /// <summary>
+        /// Unhides items, like movies, shows and / or seasons, for a specific section.
+        /// <para>OAuth authorization required.</para>
+        /// <para>
+        /// See <a href="http://docs.trakt.apiary.io/#reference/users/remove-hidden-items/remove-hidden-items">"Trakt API Doc - Users: Remove Hidden Items"</a> for more information.
+        /// </para>
+        /// </summary>
+        /// <param name="hiddenItemsPostBuilder">
+        /// The builder for the hidden items remove post.
+        /// See also <seealso cref="TraktUserHiddenItemsPostBuilder" /> and <seealso cref="TraktUserHiddenItemsPost.Builder(TraktHiddenItemsSection)" />.
+        /// </param>
+        /// <returns>An <see cref="TraktUserHiddenItemsRemovePostResponse" /> instance, which contains information about which items were deleted and not found.</returns>
+        /// <exception cref="TraktException">Thrown, if the request fails.</exception>
+        /// <exception cref="ArgumentNullException">Thrown, if the given hidden items remove post builder is null.</exception>
+        [OAuthAuthorizationRequired]
+        public async Task<TraktUserHiddenItemsRemovePostResponse> RemoveHiddenItemsAsync(TraktUserHiddenItemsPostBuilder hiddenItemsPostBuilder)
+        {
+            if (hiddenItemsPostBuilder == null)
+                throw new ArgumentNullException(nameof(hiddenItemsPostBuilder));
+
+            return await QueryAsync(new TraktUserHiddenItemsRemoveRequest(Client)
+            {
+                Section = hiddenItemsPostBuilder.Section,
+                RequestBody = hiddenItemsPostBuilder.Build()
             });
         }
 
