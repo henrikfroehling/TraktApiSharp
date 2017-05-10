@@ -15,10 +15,7 @@
         protected override IDictionary<string, object> GetUriPathParameters()
         {
             var uriParams = base.GetUriPathParameters();
-
-            if (Section != null && Section != TraktHiddenItemsSection.Unspecified)
-                uriParams.Add("section", Section.UriName);
-
+            uriParams.Add("section", Section.UriName);
             return uriParams;
         }
 

@@ -123,7 +123,7 @@
         /// </param>
         /// <returns>An <see cref="TraktUserHiddenItemsPostResponse" /> instance, which contains information about which items were added and not found.</returns>
         /// <exception cref="TraktException">Thrown, if the request fails.</exception>
-        /// <exception cref="ArgumentException">Thrown, if the given hidden items post builder is null.</exception>
+        /// <exception cref="ArgumentNullException">Thrown, if the given hidden items post builder is null.</exception>
         [OAuthAuthorizationRequired]
         public async Task<TraktUserHiddenItemsPostResponse> AddHiddenItemsAsync(TraktUserHiddenItemsPostBuilder hiddenItemsPostBuilder)
         {
@@ -150,7 +150,7 @@
         /// </param>
         /// <returns>An <see cref="TraktUserHiddenItemsRemovePostResponse" /> instance, which contains information about which items were deleted and not found.</returns>
         /// <exception cref="TraktException">Thrown, if the request fails.</exception>
-        /// <exception cref="ArgumentException">Thrown, if the given hidden items remove post builder is null.</exception>
+        /// <exception cref="ArgumentNullException">Thrown, if the given hidden items remove post builder is null.</exception>
         [OAuthAuthorizationRequired]
         public async Task<TraktUserHiddenItemsRemovePostResponse> RemoveHiddenItemsAsync(TraktUserHiddenItemsPostBuilder hiddenItemsPostBuilder)
         {
