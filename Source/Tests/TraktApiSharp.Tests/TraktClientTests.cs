@@ -187,6 +187,14 @@
         }
 
         [TestMethod]
+        public void TestTraktClientGetNetworksModule()
+        {
+            var client = new TraktClient();
+
+            client.Networks.Should().NotBeNull();
+        }
+
+        [TestMethod]
         public void TestTraktClientGetSearchModule()
         {
             var client = new TraktClient();
