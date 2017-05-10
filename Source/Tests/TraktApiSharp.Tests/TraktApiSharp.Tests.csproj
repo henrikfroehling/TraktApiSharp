@@ -127,6 +127,7 @@
     <Compile Include="Modules\TraktShowsModuleTests.cs" />
     <Compile Include="Modules\TraktSyncModuleTests.cs" />
     <Compile Include="Modules\TraktUsersModuleTests.cs" />
+    <Compile Include="Objects\Basic\TraktNetworkTests.cs" />
     <Compile Include="Objects\Get\Shows\Episodes\TraktEpisodeSingleTranslationTests.cs" />
     <Compile Include="Objects\Get\Shows\Episodes\TraktEpisodeTranslationsTests.cs" />
     <Compile Include="Objects\Post\Syncs\Collection\TraktSyncCollectionPostBuilderTests.cs" />
@@ -364,6 +365,7 @@
     <None Include="TestData\Objects\Basic\Ids.json" />
     <None Include="TestData\Objects\Basic\Image.json" />
     <None Include="TestData\Objects\Basic\ImageSet.json" />
+    <None Include="TestData\Objects\Basic\Network.json" />
     <None Include="TestData\Objects\Basic\Rating.json" />
     <None Include="TestData\Objects\Basic\Search\SearchIdLookupResultEpisode.json" />
     <None Include="TestData\Objects\Basic\Search\SearchIdLookupResultMovie.json" />
