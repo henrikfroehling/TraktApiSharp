@@ -114,11 +114,13 @@
     <Compile Include="Exceptions\TraktCheckinExceptionTests.cs" />
     <Compile Include="Modules\TraktBaseModuleTests.cs" />
     <Compile Include="Modules\TraktCalendarModuleTests.cs" />
+    <Compile Include="Modules\TraktCertificationsModuleTests.cs" />
     <Compile Include="Modules\TraktCheckinsModuleTests.cs" />
     <Compile Include="Modules\TraktCommentsModuleTests.cs" />
     <Compile Include="Modules\TraktEpisodesModuleTests.cs" />
     <Compile Include="Modules\TraktGenresModuleTests.cs" />
     <Compile Include="Modules\TraktMoviesModuleTests.cs" />
+    <Compile Include="Modules\TraktNetworksModuleTests.cs" />
     <Compile Include="Modules\TraktPeopleModuleTests.cs" />
     <Compile Include="Modules\TraktRecommendationsModuleTests.cs" />
     <Compile Include="Modules\TraktScrobbleModuleTests.cs" />
@@ -127,6 +129,9 @@
     <Compile Include="Modules\TraktShowsModuleTests.cs" />
     <Compile Include="Modules\TraktSyncModuleTests.cs" />
     <Compile Include="Modules\TraktUsersModuleTests.cs" />
+    <Compile Include="Objects\Basic\TraktCertificationsTests.cs" />
+    <Compile Include="Objects\Basic\TraktCertificationTests.cs" />
+    <Compile Include="Objects\Basic\TraktNetworkTests.cs" />
     <Compile Include="Objects\Get\Shows\Episodes\TraktEpisodeSingleTranslationTests.cs" />
     <Compile Include="Objects\Get\Shows\Episodes\TraktEpisodeTranslationsTests.cs" />
     <Compile Include="Objects\Post\Syncs\Collection\TraktSyncCollectionPostBuilderTests.cs" />
@@ -135,6 +140,10 @@
     <Compile Include="Objects\Post\Syncs\Ratings\TraktSyncRatingsPostBuilderTests.cs" />
     <Compile Include="Objects\Post\Syncs\Watchlist\TraktSyncWatchlistPostBuilderTests.cs" />
     <Compile Include="Objects\Post\Users\CustomListItems\TraktUserCustomListItemsPostBuilderTests.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\Responses\TraktUserHiddenItemsPostResponseTests.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\Responses\TraktUserHiddenItemsRemovePostResponseTests.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\TraktUserHiddenItemsPostTests.cs" />
+    <Compile Include="Objects\Post\Users\HiddenItems\TraktUserHiddenItemsPostBuilderTests.cs" />
     <Compile Include="Requests\Base\Delete\TraktDeleteByIdRequestTests.cs" />
     <Compile Include="Requests\Base\Delete\TraktDeleteRequestTests.cs" />
     <Compile Include="Requests\Base\Get\TraktGetByIdRequestTests.cs" />
@@ -348,6 +357,8 @@
     <None Include="TestData\Authentication\Device.json" />
     <None Include="TestData\Objects\Basic\CastAndCrew.json" />
     <None Include="TestData\Objects\Basic\CastMember.json" />
+    <None Include="TestData\Objects\Basic\Certification.json" />
+    <None Include="TestData\Objects\Basic\Certifications.json" />
     <None Include="TestData\Objects\Basic\Comment.json" />
     <None Include="TestData\Objects\Basic\CommentReplies.json" />
     <None Include="TestData\Objects\Basic\Connections.json" />
@@ -360,6 +371,8 @@
     <None Include="TestData\Objects\Basic\Ids.json" />
     <None Include="TestData\Objects\Basic\Image.json" />
     <None Include="TestData\Objects\Basic\ImageSet.json" />
+    <None Include="TestData\Objects\Basic\Network.json" />
+    <None Include="TestData\Objects\Basic\Networks.json" />
     <None Include="TestData\Objects\Basic\Rating.json" />
     <None Include="TestData\Objects\Basic\Search\SearchIdLookupResultEpisode.json" />
     <None Include="TestData\Objects\Basic\Search\SearchIdLookupResultMovie.json" />
@@ -548,9 +561,10 @@
     <None Include="TestData\Objects\Post\Syncs\Watchlist\Responses\SyncWatchlistRemovePostResponse.json" />
     <None Include="TestData\Objects\Post\Users\CustomListItems\Responses\UserCustomListItemsPostResponse.json" />
     <None Include="TestData\Objects\Post\Users\CustomListItems\Responses\UserCustomListItemsRemovePostResponse.json" />
+    <None Include="TestData\Objects\Post\Users\HiddenItems\Responses\UserHiddenItemsPostResponse.json" />
+    <None Include="TestData\Objects\Post\Users\HiddenItems\Responses\UserHiddenItemsRemovePostResponse.json" />
     <None Include="TestData\Objects\Post\Users\Responses\FollowUserPostResponse.json" />
   </ItemGroup>
-  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

@@ -187,6 +187,22 @@
         }
 
         [TestMethod]
+        public void TestTraktClientGetNetworksModule()
+        {
+            var client = new TraktClient();
+
+            client.Networks.Should().NotBeNull();
+        }
+
+        [TestMethod]
+        public void TestTraktClientGetCertificationsModule()
+        {
+            var client = new TraktClient();
+
+            client.Certifications.Should().NotBeNull();
+        }
+
+        [TestMethod]
         public void TestTraktClientGetSearchModule()
         {
             var client = new TraktClient();
