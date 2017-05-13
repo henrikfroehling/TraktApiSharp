@@ -143,6 +143,8 @@
     <Compile Include="Modules\TraktUsersModule.cs" />
     <Compile Include="Objects\Basic\ITraktPaginationResultHeaders.cs" />
     <Compile Include="Objects\Basic\ITraktResultHeaders.cs" />
+    <Compile Include="Objects\Basic\TraktCertification.cs" />
+    <Compile Include="Objects\Basic\TraktCertifications.cs" />
     <Compile Include="Objects\Basic\TraktMetadata.cs" />
     <Compile Include="Objects\Basic\TraktNetwork.cs" />
     <Compile Include="Objects\Basic\TraktTranslation.cs" />
