@@ -121,6 +121,7 @@
     <Compile Include="Exceptions\TraktValidationException.cs" />
     <Compile Include="Extensions\DateTimeExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Modules\TraktCertificationsModule.cs" />
     <Compile Include="Modules\TraktMultipleEpisodesQueryParams.cs" />
     <Compile Include="Modules\TraktBaseModule.cs" />
     <Compile Include="Modules\TraktCalendarModule.cs" />

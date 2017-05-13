@@ -114,6 +114,7 @@
     <Compile Include="Exceptions\TraktCheckinExceptionTests.cs" />
     <Compile Include="Modules\TraktBaseModuleTests.cs" />
     <Compile Include="Modules\TraktCalendarModuleTests.cs" />
+    <Compile Include="Modules\TraktCertificationsModuleTests.cs" />
     <Compile Include="Modules\TraktCheckinsModuleTests.cs" />
     <Compile Include="Modules\TraktCommentsModuleTests.cs" />
     <Compile Include="Modules\TraktEpisodesModuleTests.cs" />
