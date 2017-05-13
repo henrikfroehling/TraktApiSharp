@@ -121,6 +121,7 @@
     <Compile Include="Exceptions\TraktValidationException.cs" />
     <Compile Include="Extensions\DateTimeExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Modules\TraktCertificationsModule.cs" />
     <Compile Include="Modules\TraktMultipleEpisodesQueryParams.cs" />
     <Compile Include="Modules\TraktBaseModule.cs" />
     <Compile Include="Modules\TraktCalendarModule.cs" />
@@ -143,6 +144,8 @@
     <Compile Include="Modules\TraktUsersModule.cs" />
     <Compile Include="Objects\Basic\ITraktPaginationResultHeaders.cs" />
     <Compile Include="Objects\Basic\ITraktResultHeaders.cs" />
+    <Compile Include="Objects\Basic\TraktCertification.cs" />
+    <Compile Include="Objects\Basic\TraktCertifications.cs" />
     <Compile Include="Objects\Basic\TraktMetadata.cs" />
     <Compile Include="Objects\Basic\TraktNetwork.cs" />
     <Compile Include="Objects\Basic\TraktTranslation.cs" />
@@ -351,6 +354,9 @@
     <Compile Include="Requests\WithOAuth\Users\TraktUserHiddenItemsAddRequest.cs" />
     <Compile Include="Requests\WithOAuth\Users\TraktUserHiddenItemsRemoveRequest.cs" />
     <Compile Include="Requests\WithoutOAuth\Calendars\TraktCalendarAllDVDMoviesRequest.cs" />
+    <Compile Include="Requests\WithoutOAuth\Certifications\ATraktCertificationsRequest.cs" />
+    <Compile Include="Requests\WithoutOAuth\Certifications\TraktMovieCertificationsRequest.cs" />
+    <Compile Include="Requests\WithoutOAuth\Certifications\TraktShowCertificationsRequest.cs" />
     <Compile Include="Requests\WithoutOAuth\Movies\TraktMovieListsRequest.cs" />
     <Compile Include="Requests\WithoutOAuth\Networks\TraktNetworksRequest.cs" />
     <Compile Include="Requests\WithoutOAuth\Shows\Episodes\TraktEpisodeListsRequest.cs" />

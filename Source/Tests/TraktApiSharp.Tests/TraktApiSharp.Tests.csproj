@@ -114,6 +114,7 @@
     <Compile Include="Exceptions\TraktCheckinExceptionTests.cs" />
     <Compile Include="Modules\TraktBaseModuleTests.cs" />
     <Compile Include="Modules\TraktCalendarModuleTests.cs" />
+    <Compile Include="Modules\TraktCertificationsModuleTests.cs" />
     <Compile Include="Modules\TraktCheckinsModuleTests.cs" />
     <Compile Include="Modules\TraktCommentsModuleTests.cs" />
     <Compile Include="Modules\TraktEpisodesModuleTests.cs" />
@@ -128,6 +129,8 @@
     <Compile Include="Modules\TraktShowsModuleTests.cs" />
     <Compile Include="Modules\TraktSyncModuleTests.cs" />
     <Compile Include="Modules\TraktUsersModuleTests.cs" />
+    <Compile Include="Objects\Basic\TraktCertificationsTests.cs" />
+    <Compile Include="Objects\Basic\TraktCertificationTests.cs" />
     <Compile Include="Objects\Basic\TraktNetworkTests.cs" />
     <Compile Include="Objects\Get\Shows\Episodes\TraktEpisodeSingleTranslationTests.cs" />
     <Compile Include="Objects\Get\Shows\Episodes\TraktEpisodeTranslationsTests.cs" />
@@ -354,6 +357,8 @@
     <None Include="TestData\Authentication\Device.json" />
     <None Include="TestData\Objects\Basic\CastAndCrew.json" />
     <None Include="TestData\Objects\Basic\CastMember.json" />
+    <None Include="TestData\Objects\Basic\Certification.json" />
+    <None Include="TestData\Objects\Basic\Certifications.json" />
     <None Include="TestData\Objects\Basic\Comment.json" />
     <None Include="TestData\Objects\Basic\CommentReplies.json" />
     <None Include="TestData\Objects\Basic\Connections.json" />
