@@ -396,6 +396,7 @@
             seasonsArray[0].TotalEpisodesCount.Should().Be(23);
             seasonsArray[0].AiredEpisodesCount.Should().Be(23);
             seasonsArray[0].Overview.Should().BeNullOrEmpty();
+            seasonsArray[0].Network.Should().Be("The CW");
             seasonsArray[0].FirstAired.Should().Be(DateTime.Parse("2014-10-08T00:00:00Z").ToUniversalTime());
 
             seasonsArray[0].Episodes.Should().BeNull();
@@ -413,6 +414,7 @@
             seasonsArray[1].TotalEpisodesCount.Should().Be(23);
             seasonsArray[1].AiredEpisodesCount.Should().Be(17);
             seasonsArray[1].Overview.Should().Be("Following the defeat of Barry Allen's arch-nemesis Eobard Thawne (aka Reverse Flash), Team Flash quickly turned their attention to the singularity swirling high above Central City, which fans last saw consuming everything in its path. Armed with the heart of a hero and the ability to move at super speeds, Barry charged into the eye of the singularity, but will he actually be able to save his city from impending doom?");
+            seasonsArray[1].Network.Should().Be("The CW");
             seasonsArray[1].FirstAired.Should().Be(DateTime.Parse("2015-10-07T00:00:00Z").ToUniversalTime());
 
             seasonsArray[1].Episodes.Should().BeNull();
@@ -445,6 +447,7 @@
             seasonsArray[0].TotalEpisodesCount.Should().Be(23);
             seasonsArray[0].AiredEpisodesCount.Should().Be(23);
             seasonsArray[0].Overview.Should().BeNullOrEmpty();
+            seasonsArray[0].Network.Should().Be("The CW");
             seasonsArray[0].FirstAired.Should().Be(DateTime.Parse("2014-10-08T00:00:00Z").ToUniversalTime());
 
             seasonsArray[0].Episodes.Should().NotBeNull().And.HaveCount(2);
@@ -498,6 +501,7 @@
             seasonsArray[1].TotalEpisodesCount.Should().Be(23);
             seasonsArray[1].AiredEpisodesCount.Should().Be(17);
             seasonsArray[1].Overview.Should().Be("Following the defeat of Barry Allen's arch-nemesis Eobard Thawne (aka Reverse Flash), Team Flash quickly turned their attention to the singularity swirling high above Central City, which fans last saw consuming everything in its path. Armed with the heart of a hero and the ability to move at super speeds, Barry charged into the eye of the singularity, but will he actually be able to save his city from impending doom?");
+            seasonsArray[1].Network.Should().Be("The CW");
             seasonsArray[1].FirstAired.Should().Be(DateTime.Parse("2015-10-07T00:00:00Z").ToUniversalTime());
 
             seasonsArray[1].Episodes.Should().NotBeNull().And.HaveCount(2);
@@ -566,6 +570,7 @@
             seasonsArray[0].TotalEpisodesCount.Should().Be(23);
             seasonsArray[0].AiredEpisodesCount.Should().Be(23);
             seasonsArray[0].Overview.Should().BeNullOrEmpty();
+            seasonsArray[0].Network.Should().Be("The CW");
             seasonsArray[0].FirstAired.Should().Be(DateTime.Parse("2014-10-08T00:00:00Z").ToUniversalTime());
             seasonsArray[0].Images.Should().NotBeNull();
             seasonsArray[0].Images.Poster.Full.Should().Be("https://walter.trakt.us/images/seasons/000/061/430/posters/original/ea214a63c3.jpg");
@@ -588,6 +593,7 @@
             seasonsArray[1].TotalEpisodesCount.Should().Be(23);
             seasonsArray[1].AiredEpisodesCount.Should().Be(17);
             seasonsArray[1].Overview.Should().Be("Following the defeat of Barry Allen's arch-nemesis Eobard Thawne (aka Reverse Flash), Team Flash quickly turned their attention to the singularity swirling high above Central City, which fans last saw consuming everything in its path. Armed with the heart of a hero and the ability to move at super speeds, Barry charged into the eye of the singularity, but will he actually be able to save his city from impending doom?");
+            seasonsArray[1].Network.Should().Be("The CW");
             seasonsArray[1].FirstAired.Should().Be(DateTime.Parse("2015-10-07T00:00:00Z").ToUniversalTime());
             seasonsArray[1].Images.Should().NotBeNull();
             seasonsArray[1].Images.Poster.Full.Should().Be("https://walter.trakt.us/images/seasons/000/110/984/posters/original/26132fb16c.jpg");
@@ -625,6 +631,7 @@
             seasonsArray[0].TotalEpisodesCount.Should().Be(23);
             seasonsArray[0].AiredEpisodesCount.Should().Be(23);
             seasonsArray[0].Overview.Should().BeNullOrEmpty();
+            seasonsArray[0].Network.Should().Be("The CW");
             seasonsArray[0].FirstAired.Should().Be(DateTime.Parse("2014-10-08T00:00:00Z").ToUniversalTime());
             seasonsArray[0].Images.Should().NotBeNull();
             seasonsArray[0].Images.Poster.Full.Should().Be("https://walter.trakt.us/images/seasons/000/061/430/posters/original/ea214a63c3.jpg");
@@ -691,6 +698,7 @@
             seasonsArray[1].TotalEpisodesCount.Should().Be(23);
             seasonsArray[1].AiredEpisodesCount.Should().Be(17);
             seasonsArray[1].Overview.Should().Be("Following the defeat of Barry Allen's arch-nemesis Eobard Thawne (aka Reverse Flash), Team Flash quickly turned their attention to the singularity swirling high above Central City, which fans last saw consuming everything in its path. Armed with the heart of a hero and the ability to move at super speeds, Barry charged into the eye of the singularity, but will he actually be able to save his city from impending doom?");
+            seasonsArray[1].Network.Should().Be("The CW");
             seasonsArray[1].FirstAired.Should().Be(DateTime.Parse("2015-10-07T00:00:00Z").ToUniversalTime());
             seasonsArray[1].Images.Should().NotBeNull();
             seasonsArray[1].Images.Poster.Full.Should().Be("https://walter.trakt.us/images/seasons/000/110/984/posters/original/26132fb16c.jpg");
