@@ -33,5 +33,14 @@
         [JsonProperty(PropertyName = "next_episode")]
         [Nullable]
         public TraktEpisode NextEpisode { get; set; }
+
+        /// <summary>
+        /// Gets or sets the episode, which the user collected or watched last.
+        /// See also <seealso cref="TraktEpisode" />.
+        /// <para>Nullable</para>
+        /// </summary>
+        [JsonProperty(PropertyName = "last_episode")]
+        [Nullable]
+        public TraktEpisode LastEpisode { get; set; }
     }
 }
