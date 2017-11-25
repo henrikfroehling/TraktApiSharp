@@ -66,6 +66,10 @@
         [JsonProperty(PropertyName = "first_aired")]
         public DateTime? FirstAired { get; set; }
 
+        /// <summary>Gets or sets the network on which the season airs.</summary>
+        [JsonProperty(PropertyName = "network")]
+        public string Network { get; set; }
+
         /// <summary>Gets or sets the collection of Trakt episodes in the season. See also <seealso cref="TraktEpisode" />.<para>Nullable</para></summary>
         /// <remarks>
         /// This property is set automatically if this season is in a collection
