@@ -21,6 +21,7 @@
             watchedProgress.Seasons.Should().BeNull();
             watchedProgress.HiddenSeasons.Should().BeNull();
             watchedProgress.NextEpisode.Should().BeNull();
+            watchedProgress.LastEpisode.Should().BeNull();
         }
 
         [TestMethod]
@@ -104,6 +105,17 @@
             watchedProgress.NextEpisode.Ids.Imdb.Should().BeNull();
             watchedProgress.NextEpisode.Ids.Tmdb.Should().BeNull();
             watchedProgress.NextEpisode.Ids.TvRage.Should().BeNull();
+
+            watchedProgress.LastEpisode.Should().NotBeNull();
+            watchedProgress.LastEpisode.SeasonNumber.Should().Be(1);
+            watchedProgress.LastEpisode.Number.Should().Be(2);
+            watchedProgress.LastEpisode.Title.Should().Be("Storm");
+            watchedProgress.LastEpisode.Ids.Should().NotBeNull();
+            watchedProgress.LastEpisode.Ids.Trakt.Should().Be(62316U);
+            watchedProgress.LastEpisode.Ids.Tvdb.Should().Be(4849875U);
+            watchedProgress.LastEpisode.Ids.Imdb.Should().BeNull();
+            watchedProgress.LastEpisode.Ids.Tmdb.Should().BeNull();
+            watchedProgress.LastEpisode.Ids.TvRage.Should().BeNull();
         }
 
         [TestMethod]
@@ -170,6 +182,7 @@
             hiddenSeasons[0].Ids.TvRage.Should().BeNull();
 
             watchedProgress.NextEpisode.Should().BeNull();
+            watchedProgress.LastEpisode.Should().BeNull();
         }
     }
 }

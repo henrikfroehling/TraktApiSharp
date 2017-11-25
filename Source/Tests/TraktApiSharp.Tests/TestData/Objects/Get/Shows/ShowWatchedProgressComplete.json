@@ -52,5 +52,6 @@
       }
     }
   ],
-  "next_episode": null
+  "next_episode": null,
+  "last_episode": null
 }
