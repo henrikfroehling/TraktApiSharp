@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>TraktApiSharp</id>
-        <version>0.10.0</version>
+        <version>0.11.0</version>
         <title>TraktApiSharp</title>
         <authors>Henrik Fröhling</authors>
         <owners>henrikfroehling</owners>
@@ -21,16 +21,12 @@ Features
         </description>
         <summary>.NET wrapper library for the Trakt.tv API.</summary>
         <releaseNotes>Added:
-- TraktCertificationsModule
-  - GetMovieCertificationsAsync()
-  - GetShowCertificationsAsync()
-- TraktNetworksModule
-  - GetNetworksAsync()
-- AddHiddenItemsAsync() in TraktUsersModule
-- RemoveHiddenItemsAsync() TraktUsersModule
-- "Title" property in TraktSeason
+- "LastEpisode" property in TraktShowProgress
+- "DTS_X" in TraktMediaAudio
+- "DolbyAtmos" in TraktMediaAudio
+- "Network" property in TraktSeason
         </releaseNotes>
-        <copyright>Copyright (c) 2016 - 2017 Henrik Fröhling</copyright>
+        <copyright>Copyright (c) 2016 - 2017 Henrik Fröhling et al.</copyright>
         <language>en-US</language>
         <tags>trakt REST</tags>
         <dependencies>

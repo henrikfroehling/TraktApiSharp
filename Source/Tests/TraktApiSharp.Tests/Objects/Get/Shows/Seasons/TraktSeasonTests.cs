@@ -26,6 +26,7 @@
             season.AiredEpisodesCount.Should().NotHaveValue();
             season.Overview.Should().BeNullOrEmpty();
             season.FirstAired.Should().NotHaveValue();
+            season.Network.Should().BeNull();
             season.Episodes.Should().BeNull();
         }
 
@@ -53,6 +54,7 @@
             season.AiredEpisodesCount.Should().NotHaveValue();
             season.Overview.Should().BeNullOrEmpty();
             season.FirstAired.Should().NotHaveValue();
+            season.Network.Should().BeNull();
             season.Episodes.Should().BeNull();
         }
 
@@ -79,6 +81,7 @@
             season.TotalEpisodesCount.Should().NotHaveValue();
             season.AiredEpisodesCount.Should().NotHaveValue();
             season.Overview.Should().BeNullOrEmpty();
+            season.Network.Should().BeNull();
             season.FirstAired.Should().NotHaveValue();
 
             season.Episodes.Should().NotBeNull();
@@ -117,6 +120,7 @@
             season.TotalEpisodesCount.Should().NotHaveValue();
             season.AiredEpisodesCount.Should().NotHaveValue();
             season.Overview.Should().BeNullOrEmpty();
+            season.Network.Should().BeNull();
             season.FirstAired.Should().NotHaveValue();
 
             season.Episodes.Should().NotBeNull();
@@ -166,6 +170,7 @@
             season.AiredEpisodesCount.Should().NotHaveValue();
             season.Overview.Should().BeNullOrEmpty();
             season.FirstAired.Should().NotHaveValue();
+            season.Network.Should().BeNull();
             season.Episodes.Should().BeNull();
         }
 
@@ -196,6 +201,7 @@
             season.TotalEpisodesCount.Should().NotHaveValue();
             season.AiredEpisodesCount.Should().NotHaveValue();
             season.Overview.Should().BeNullOrEmpty();
+            season.Network.Should().BeNull();
             season.FirstAired.Should().NotHaveValue();
 
             season.Episodes.Should().NotBeNull();
@@ -235,6 +241,7 @@
             season.AiredEpisodesCount.Should().Be(23);
             season.Overview.Should().BeNullOrEmpty();
             season.FirstAired.Should().Be(DateTime.Parse("2014-10-08T00:00:00Z").ToUniversalTime());
+            season.Network.Should().Be("The CW");
             season.Episodes.Should().BeNull();
         }
 
@@ -261,6 +268,7 @@
             season.TotalEpisodesCount.Should().Be(23);
             season.AiredEpisodesCount.Should().Be(23);
             season.Overview.Should().BeNullOrEmpty();
+            season.Network.Should().Be("The CW");
             season.FirstAired.Should().Be(DateTime.Parse("2014-10-08T00:00:00Z").ToUniversalTime());
 
             season.Episodes.Should().NotBeNull();
@@ -303,6 +311,7 @@
             season.TotalEpisodesCount.Should().Be(23);
             season.AiredEpisodesCount.Should().Be(23);
             season.Overview.Should().BeNullOrEmpty();
+            season.Network.Should().Be("The CW");
             season.FirstAired.Should().Be(DateTime.Parse("2014-10-08T00:00:00Z").ToUniversalTime());
             season.Episodes.Should().BeNull();
         }
@@ -334,6 +343,7 @@
             season.TotalEpisodesCount.Should().Be(23);
             season.AiredEpisodesCount.Should().Be(23);
             season.Overview.Should().BeNullOrEmpty();
+            season.Network.Should().Be("The CW");
             season.FirstAired.Should().Be(DateTime.Parse("2014-10-08T00:00:00Z").ToUniversalTime());
 
             season.Episodes.Should().NotBeNull();

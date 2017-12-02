@@ -2,6 +2,19 @@ Release notes
 =============
 ---
 
+Version 0.11.0
+===
+
+#### 0.11.0
+*(2017-12-02)*
+
+Added:
+
+ - "LastEpisode" property in `TraktShowProgress` ([Issue #94](https://github.com/henrikfroehling/TraktApiSharp/issues/94))
+ - "DTS_X" in `TraktMediaAudio` ([Issue #95](https://github.com/henrikfroehling/TraktApiSharp/issues/95))
+ - "DolbyAtmos" in `TraktMediaAudio` ([Issue #95](https://github.com/henrikfroehling/TraktApiSharp/issues/95))
+ - "Network" property in `TraktSeason` ([Issue #96](https://github.com/henrikfroehling/TraktApiSharp/issues/96))
+
 Version 0.10.0
 ===
 
@@ -10,14 +23,14 @@ Version 0.10.0
 
 Added:
 
- - TraktCertificationsModule ([Issue #62](https://github.com/henrikfroehling/TraktApiSharp/issues/62))
-   - GetMovieCertificationsAsync()
-   - GetShowCertificationsAsync()
- - TraktNetworksModule ([Issue #63](https://github.com/henrikfroehling/TraktApiSharp/issues/63))
-   - GetNetworksAsync()
- - AddHiddenItemsAsync() in TraktUsersModule ([Issue #54](https://github.com/henrikfroehling/TraktApiSharp/issues/54))
- - RemoveHiddenItemsAsync() TraktUsersModule ([Issue #55](https://github.com/henrikfroehling/TraktApiSharp/issues/55))
- - "Title" property in TraktSeason ([Issue #53](https://github.com/henrikfroehling/TraktApiSharp/issues/53) (thanks to [Romans Pokrovskis](https://github.com/Amoenus)))
+ - `TraktCertificationsModule` ([Issue #62](https://github.com/henrikfroehling/TraktApiSharp/issues/62))
+   - `GetMovieCertificationsAsync()`
+   - `GetShowCertificationsAsync()`
+ - `TraktNetworksModule` ([Issue #63](https://github.com/henrikfroehling/TraktApiSharp/issues/63))
+   - `GetNetworksAsync()`
+ - `AddHiddenItemsAsync()` in `TraktUsersModule` ([Issue #54](https://github.com/henrikfroehling/TraktApiSharp/issues/54))
+ - `RemoveHiddenItemsAsync()` `TraktUsersModule` ([Issue #55](https://github.com/henrikfroehling/TraktApiSharp/issues/55))
+ - "Title" property in `TraktSeason` ([Issue #53](https://github.com/henrikfroehling/TraktApiSharp/issues/53) (thanks to [Romans Pokrovskis](https://github.com/Amoenus)))
 
 Version 0.9.0
 ===
@@ -27,29 +40,29 @@ Version 0.9.0
 
 Fixed:
 
-- GetMovieReleasesAsync() in TraktMoviesModule
-- GetMovieTranslationsAsync() in TraktMoviesModule
-- GetShowTranslationsAsync() in TraktShowsModule
+- `GetMovieReleasesAsync()` in `TraktMoviesModule`
+- `GetMovieTranslationsAsync()` in `TraktMoviesModule`
+- `GetShowTranslationsAsync()` in `TraktShowsModule`
 
 Added:
 
-- GetEpisodeListsAsync() in TraktEpisodesModule
-- GetEpisodeTranslationsAsync() in TraktEpisodesModule
-- GetMovieListsAsync() in TraktMoviesModule
-- GetSeasonListsAsync() in TraktSeasonsModule
-- GetShowListsAsync() in TraktShowsModule
-- "Runtime" property in TraktEpisode
-- "Translations" property in TraktEpisode
-- support for episode translations in GetAllSeasonsAsync() in TraktSeasonsModule
-- support for episode translations in GetSeasonAsync() in TraktSeasonsModule
+- `GetEpisodeListsAsync()` in `TraktEpisodesModule`
+- `GetEpisodeTranslationsAsync()` in `TraktEpisodesModule`
+- `GetMovieListsAsync()` in `TraktMoviesModule`
+- `GetSeasonListsAsync()` in `TraktSeasonsModule`
+- `GetShowListsAsync()` in `TraktShowsModule`
+- "Runtime" property in `TraktEpisode`
+- "Translations" property in `TraktEpisode`
+- support for episode translations in `GetAllSeasonsAsync()` in `TraktSeasonsModule`
+- support for episode translations in `GetSeasonAsync()` in `TraktSeasonsModule`
 
 Removed:
 
-- GetMovieSingleReleaseAsync() in TraktMoviesModule (use GetMovieReleasesAsync() instead)
-- GetMovieSingleTranslationAsync() in TraktMoviesModule (use GetMovieTranslationsAsync() instead)
-- GetShowSingleTranslationAsync() in TraktShowsModule (use GetShowTranslationsAsync() instead
-- deprecated version of GetTextQueryResultsAsync() in TraktSearchModule
-- deprecated version of GetIdLookupResultsAsync() in TraktSearchModule
+- `GetMovieSingleReleaseAsync()` in `TraktMoviesModule` (use `GetMovieReleasesAsync()` instead)
+- `GetMovieSingleTranslationAsync()` in `TraktMoviesModule` (use `GetMovieTranslationsAsync()` instead)
+- `GetShowSingleTranslationAsync()` in `TraktShowsModule` (use `GetShowTranslationsAsync()` instead
+- deprecated version of `GetTextQueryResultsAsync()` in `TraktSearchModule`
+- deprecated version of `GetIdLookupResultsAsync()` in `TraktSearchModule`
 
 Version 0.8.0
 ===
@@ -60,35 +73,35 @@ Version 0.8.0
 Added:
 
 - range support for years parameter in filters
-- AddMovies(IEnumerable< TraktMovie >) in TraktSyncCollectionPostBuilder
-- AddShows(IEnumerable< TraktShow >) in TraktSyncCollectionPostBuilder
-- AddEpisodes(IEnumerable< TraktEpisode >) in TraktSyncCollectionPostBuilder
-- more overloads for AddShow() in TraktSyncCollectionPostBuilder
-- AddMovies(IEnumerable< TraktMovie >) in TraktSyncRatingsPostBuilder
-- AddShows(IEnumerable< TraktShow >) in TraktSyncRatingsPostBuilder
-- AddEpisodes(IEnumerable< TraktEpisode >) in TraktSyncRatingsPostBuilder
-- more overloads for AddShow() and AddShowWithRating() in TraktSyncRatingsPostBuilder
-- AddMovies(IEnumerable< TraktMovie >) in TraktSyncWatchlistPostBuilder
-- AddShows(IEnumerable< TraktShow >) in TraktSyncWatchlistPostBuilder
-- AddEpisodes(IEnumerable< TraktEpisode >) in TraktSyncWatchlistPostBuilder
-- more overloads for AddShow() in TraktSyncWatchlistPostBuilder
-- AddMovies(IEnumerable< TraktMovie >) in TraktSyncHistoryPostBuilder
-- AddShows(IEnumerable< TraktShow >) in TraktSyncHistoryPostBuilder
-- AddEpisodes(IEnumerable< TraktEpisode >) in TraktSyncHistoryPostBuilder
-- more overloads for AddShow() in TraktSyncHistoryPostBuilder
-- AddMovies(IEnumerable< TraktMovie >) in TraktSyncHistoryRemovePostBuilder
-- AddShows(IEnumerable< TraktShow >) in TraktSyncHistoryRemovePostBuilder
-- AddEpisodes(IEnumerable< TraktEpisode >) in TraktSyncHistoryRemovePostBuilder
-- more overloads for AddShow() and AddHistoryIds() in TraktSyncHistoryRemovePostBuilder
-- AddMovies(IEnumerable< TraktMovie >) in TraktUserCustomListItemsPostBuilder
-- AddShows(IEnumerable< TraktShow >) in TraktUserCustomListItemsPostBuilder
-- AddPersons(IEnumerable< TraktPerson >) in TraktUserCustomListItemsPostBuilder
-- more overloads for AddShow() in TraktUserCustomListItemsPostBuilder
+- `AddMovies(IEnumerable<TraktMovie>)` in `TraktSyncCollectionPostBuilder`
+- `AddShows(IEnumerable<TraktShow>)` in `TraktSyncCollectionPostBuilder`
+- `AddEpisodes(IEnumerable<TraktEpisode>)` in `TraktSyncCollectionPostBuilder`
+- more overloads for `AddShow()` in `TraktSyncCollectionPostBuilder`
+- `AddMovies(IEnumerable<TraktMovie>)` in `TraktSyncRatingsPostBuilder`
+- `AddShows(IEnumerable<TraktShow>)` in `TraktSyncRatingsPostBuilder`
+- `AddEpisodes(IEnumerable<TraktEpisode>)` in `TraktSyncRatingsPostBuilder`
+- more overloads for `AddShow()` and `AddShowWithRating()` in `TraktSyncRatingsPostBuilder`
+- `AddMovies(IEnumerable<TraktMovie>)` in `TraktSyncWatchlistPostBuilder`
+- `AddShows(IEnumerable<TraktShow>)` in `TraktSyncWatchlistPostBuilder`
+- `AddEpisodes(IEnumerable<TraktEpisode>)` in `TraktSyncWatchlistPostBuilder`
+- more overloads for `AddShow()` in `TraktSyncWatchlistPostBuilder`
+- `AddMovies(IEnumerable<TraktMovie>)` in `TraktSyncHistoryPostBuilder`
+- `AddShows(IEnumerable<TraktShow>)` in `TraktSyncHistoryPostBuilder`
+- `AddEpisodes(IEnumerable<TraktEpisode>)` in `TraktSyncHistoryPostBuilder`
+- more overloads for `AddShow()` in `TraktSyncHistoryPostBuilder`
+- `AddMovies(IEnumerable<TraktMovie>)` in `TraktSyncHistoryRemovePostBuilder`
+- `AddShows(IEnumerable<TraktShow>)` in `TraktSyncHistoryRemovePostBuilder`
+- `AddEpisodes(IEnumerable<TraktEpisode>)` in `TraktSyncHistoryRemovePostBuilder`
+- more overloads for `AddShow()` and `AddHistoryIds()` in `TraktSyncHistoryRemovePostBuilder`
+- `AddMovies(IEnumerable<TraktMovie>)` in `TraktUserCustomListItemsPostBuilder`
+- `AddShows(IEnumerable<TraktShow>)` in `TraktUserCustomListItemsPostBuilder`
+- `AddPersons(IEnumerable<TraktPerson>)` in `TraktUserCustomListItemsPostBuilder`
+- more overloads for `AddShow()` in `TraktUserCustomListItemsPostBuilder`
 
 Improved:
 
-- performance of Serialize(TraktAuthorization) in TraktSerializationService
-- performance of DeserializeAuthorization() in TraktSerializationService
+- performance of `Serialize(TraktAuthorization)` in `TraktSerializationService`
+- performance of `DeserializeAuthorization()` in `TraktSerializationService`
 
 Version 0.7.0
 ===
@@ -98,25 +111,25 @@ Version 0.7.0
 
 Added:
 
-- support for "calendars/all/dvd" request (TraktCalendarModule.GetAllDVDMoviesAsync())
-- support for "calendars/my/dvd" request (TraktCalendarModule.GetUserDVDMoviesAsync())
-- Clear*ParameterName*() method for each parameter in TraktCalendarFilter, TraktMovieFilter, TraktShowFilter and TraktSearchFilter
+- support for "calendars/all/dvd" request (`TraktCalendarModule.GetAllDVDMoviesAsync()`)
+- support for "calendars/my/dvd" request (`TraktCalendarModule.GetUserDVDMoviesAsync()`)
+- `Clear*ParameterName*()` method for each parameter in `TraktCalendarFilter`, `TraktMovieFilter`, `TraktShowFilter` and `TraktSearchFilter`
 
 Renamed:
 
-- UseStagingUrl (-> UseSandboxEnvironment) in TraktConfiguration
+- `UseStagingUrl` (-> `UseSandboxEnvironment`) in `TraktConfiguration`
 
 Changed:
 
-- return type of Clear() method in TraktCalendarFilter to TraktCalendarFilter
-- return type of Clear() method in TraktMovieFilter to TraktMovieFilter
-- return type of Clear() method in TraktShowFilter to TraktShowFilter
-- return type of Clear() method in TraktSearchFilter to TraktSearchFilter
+- return type of `Clear()` method in `TraktCalendarFilter` to `TraktCalendarFilter`
+- return type of `Clear()` method in `TraktMovieFilter` to `TraktMovieFilter`
+- return type of `Clear()` method in `TraktShowFilter` to `TraktShowFilter`
+- return type of `Clear()` method in `TraktSearchFilter` to `TraktSearchFilter`
 
 Removed:
 
-- Serialize(TraktDevice) in TraktSerializationService
-- DeserializeDevice() in TraktSerializationService
+- `Serialize(TraktDevice)` in `TraktSerializationService`
+- `DeserializeDevice()` in `TraktSerializationService`
 
 Version 0.6.0
 ===
@@ -126,13 +139,13 @@ Version 0.6.0
 
 Added:
 
-- "HiddenAt" properties in response of TraktSyncModule.GetLastActivitiesAsync()
-- "Id" property (history id) in response of TraktCheckinsModule.CheckInto[Movie|Episode|EpisodeWithShow]Async()
-- "Id" property (history id) in response of TraktScrobbleModule.Start[Movie|Episode|EpisodeWithShow]Async()
-- "Id" property (history id) in response of TraktScrobbleModule.Pause[Movie|Episode|EpisodeWithShow]Async()
-- "Id" property (history id) in response of TraktScrobbleModule.Stop[Movie|Episode|EpisodeWithShow]Async()
-- support for "shows/id/next_episode" request (TraktShowsModule.GetShowNextEpisodeAsync())
-- support for "shows/id/last_episode" request (TraktShowsModule.GetShowLastEpisodeAsync())
+- "HiddenAt" properties in response of `TraktSyncModule.GetLastActivitiesAsync()`
+- "Id" property (history id) in response of `TraktCheckinsModule.CheckInto[Movie|Episode|EpisodeWithShow]Async()`
+- "Id" property (history id) in response of `TraktScrobbleModule.Start[Movie|Episode|EpisodeWithShow]Async()`
+- "Id" property (history id) in response of `TraktScrobbleModule.Pause[Movie|Episode|EpisodeWithShow]Async()`
+- "Id" property (history id) in response of `TraktScrobbleModule.Stop[Movie|Episode|EpisodeWithShow]Async()`
+- support for "shows/id/next_episode" request (`TraktShowsModule.GetShowNextEpisodeAsync()`)
+- support for "shows/id/last_episode" request (`TraktShowsModule.GetShowLastEpisodeAsync()`)
 
 Fixed:
 
@@ -145,11 +158,11 @@ Version 0.5.0
 *(2016-10-07)*
 
 Added:
-- new method overload for "CreateWith" in TraktAuthorization
+- new method overload for "CreateWith" in `TraktAuthorization`
 
 Fixed:
 - wrong OAuth authorization URL, when staging environment is enabled
-- TraktClient.Authorization is not reset after successful call of RevokeAuthorizationAsync()
+- `TraktClient.Authorization` is not reset after successful call of `RevokeAuthorizationAsync()`
 
 ---------
 
@@ -157,19 +170,19 @@ Fixed:
 *(2016-10-05)*
 
 Added:
-- method "CreateWith" in TraktAuthorization for simpler creation of TraktAuthorization from existing access tokens
-- method "CheckIfAuthorizationIsExpiredOrWasRevokedAsync" in TraktAuthentication for checking, whether authorization was revoked by user
-- method "CheckIfAccessTokenWasRevokedOrIsNotValidAsync" in TraktAuthentication for checking, whether access token was revoked by user
+- method "CreateWith" in `TraktAuthorization` for simpler creation of `TraktAuthorization` from existing access tokens
+- method "CheckIfAuthorizationIsExpiredOrWasRevokedAsync" in `TraktAuthentication` for checking, whether authorization was revoked by user
+- method "CheckIfAccessTokenWasRevokedOrIsNotValidAsync" in `TraktAuthentication` for checking, whether access token was revoked by user
 
 Removed:
-- AccessToken property in TraktClient
+- `AccessToken` property in `TraktClient`
 
 Renamed:
-- TraktExtendedOption -> TraktExtendedInfo
+- `TraktExtendedOption` -> `TraktExtendedInfo`
 
 Fixed:
-- item id parameter of GetWatchedHistoryAsync in TraktSyncModule
-- item id parameter of GetWatchedHistoryAsync in TraktUsersModule
+- item id parameter of `GetWatchedHistoryAsync()` in `TraktSyncModule`
+- item id parameter of `GetWatchedHistoryAsync()` in `TraktUsersModule`
 
 Version 0.4.0
 ===
@@ -195,8 +208,8 @@ Fixed:
 *(2016-08-30)*
 
 Fixed:
-- NullReferenceException in TraktSerializationService
-- IsExpired calculation of TraktAuthorization
+- NullReferenceException in `TraktSerializationService`
+- `IsExpired` calculation of `TraktAuthorization`
 
 ---------
 
@@ -209,9 +222,9 @@ Added:
 - count-specials parameter for show-collection- and show-watched-progress-request
 - pagination support for sync-get-watchlist- and users-get-watchlist-request
 - support for sorting headers (X-Sort-By, X-Sort-How)
-- IsValid and IsRefreshPossible properties in TraktAuthorization
-- serialization service for TraktDevice and TraktAuthorization
-- display names for Trakt enums (-> Trakt[EnumName].DisplayName)
+- `IsValid` and `IsRefreshPossible` properties in `TraktAuthorization`
+- serialization service for `TraktDevice` and `TraktAuthorization`
+- display names for Trakt enums (-> `Trakt[EnumName].DisplayName`)
 
 Removed:
 - slug from episode ids
@@ -221,13 +234,13 @@ Improved:
 - minor performance improvements
 
 Changed:
-- type of "Release" property in "TraktCalendarMovie" from string to DateTime
+- type of "Release" property in `TraktCalendarMovie` from `string` to `DateTime`
 - object ids are now unsigned
-- TraktHistoryItem id is now unsigned long
+- `TraktHistoryItem` id is now unsigned long
 
 Fixed:
 - revoking of access token
-- IsExpired calculation of TraktAuthorization
+- `IsExpired` calculation of `TraktAuthorization`
 
 Version 0.2.0
 ===
