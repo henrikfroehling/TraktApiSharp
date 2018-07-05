@@ -1,5 +1,8 @@
 TraktApiSharp [![Twitter](https://img.shields.io/twitter/url/https://www.nuget.org/packages/TraktApiSharp.svg?style=social)](https://twitter.com/intent/tweet?url=https://www.nuget.org/packages/TraktApiSharp&via=henrikfroehling&hashtags=TraktApiSharp)[![Twitter Follow](https://img.shields.io/twitter/follow/espadrine.svg?style=social&label=Follow)](https://twitter.com/henrikfroehling)
 ===
+
+#### **This repository is deprecated. For newer versions, please follow the new repository [Trakt.NET](https://github.com/henrikfroehling/Trakt.NET).**
+
 ##### This is a .NET wrapper library for the [Trakt.tv](https://trakt.tv/) [API](http://docs.trakt.apiary.io/#).
 
 [![NuGet Package](https://img.shields.io/badge/NuGet-v0.11.0-brightgreen.svg?style=flat)](https://www.nuget.org/packages/TraktApiSharp)
